@@ -70,6 +70,11 @@ export const RECEPTES = [
   { num: 1070, nom: "Natilles", categoria: "Postres", persones: 6, dificultat: "Fàcil", temps: "25 min", tipus_ingredients: ["Ous", "Làctics"], ingredients: ["1 L de llet", "6 rovells d'ou", "150 g de sucre", "30 g de midó", "1 pell de llimona", "canyella en pols"], instruccions: "Bullir la llet amb la llimona. Batre rovells amb sucre i midó. Incorporar la llet calenta i coure a foc molt lent sense deixar de remenar fins espessir. Servir fred amb canyella." },
 ]
 
+import { EXTRAS } from './extras'
+
+// Fusiona les dades base amb els passos, consells i presentació detallats
+export const RECEPTES_COMPLETES = RECEPTES.map(r => ({ ...r, ...(EXTRAS[r.num] ?? {}) }))
+
 export const CATEGORIES = [...new Set(RECEPTES.map(r => r.categoria))].sort()
 export const DIFICULTATS = ['Fàcil', 'Mitjana', 'Difícil']
 export const TIPUS_INGREDIENTS = [...new Set(RECEPTES.flatMap(r => r.tipus_ingredients))].sort()

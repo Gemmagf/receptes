@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { RECEPTES, CATEGORIES, DIFICULTATS, TIPUS_INGREDIENTS, MAX_PERSONES } from './data/receptes'
+import { RECEPTES_COMPLETES as RECEPTES, CATEGORIES, DIFICULTATS, TIPUS_INGREDIENTS, MAX_PERSONES } from './data/receptes'
 import FilterBar from './components/FilterBar'
 import RecipeList from './components/RecipeList'
 import RecipeDetail from './components/RecipeDetail'

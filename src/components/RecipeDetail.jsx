@@ -73,8 +73,43 @@ export default function RecipeDetail({ recipe: r, onBack }) {
 
       {/* Preparació */}
       <div className="bg-white rounded-xl border border-stone-200 px-4 py-4">
-        <h3 className="text-sm font-semibold text-stone-700 mb-3">👨‍🍳 Preparació</h3>
-        <p className="text-sm text-stone-600 leading-relaxed">{r.instruccions}</p>
+        <h3 className="text-sm font-semibold text-stone-700 mb-4">👨‍🍳 Preparació</h3>
+
+        {r.passos ? (
+          <ol className="space-y-4">
+            {r.passos.map((pas, i) => (
+              <li key={i} className="flex gap-3">
+                <span className="shrink-0 w-6 h-6 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <p className="text-sm text-stone-600 leading-relaxed">{pas}</p>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className="text-sm text-stone-600 leading-relaxed">{r.instruccions}</p>
+        )}
+
+        {r.consells?.length > 0 && (
+          <div className="mt-5 bg-amber-50 rounded-xl p-3.5 border border-amber-200">
+            <p className="text-xs font-semibold text-amber-700 mb-2">💡 Consells</p>
+            <ul className="space-y-1.5">
+              {r.consells.map((c, i) => (
+                <li key={i} className="text-xs text-amber-900 leading-relaxed flex gap-2">
+                  <span className="shrink-0 text-amber-400">•</span>
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {r.presentacio && (
+          <div className="mt-3 bg-green-50 rounded-xl p-3.5 border border-green-200">
+            <p className="text-xs font-semibold text-green-700 mb-1">🍽️ Presentació i servei</p>
+            <p className="text-xs text-green-900 leading-relaxed">{r.presentacio}</p>
+          </div>
+        )}
       </div>
 
       {/* Log de proves */}
