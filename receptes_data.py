@@ -8,6 +8,7 @@ RECEPTES = [
     {
         "num": 1, "nom": "Massa trencada per a canapès i barquetes",
         "categoria": "Aperitius", "persones": 6,
+        "tipus_ingredients": ["Làctics", "Ous"],
         "ingredients": ["250 g de farina", "125 g de mantequilla", "1 ou", "sal"],
         "instruccions": "Barrejar la farina amb la mantequilla a trossos fins obtenir una textura de sorra. Afegir l'ou i la sal. Formar una bola i deixar reposar 30 min a la nevera. Estirar amb el corró i folrar els motlles. Coure al forn a 180°C uns 15 minuts fins que estiguin daurats.",
         "temps": "45 min", "dificultat": "Fàcil"
@@ -15,6 +16,7 @@ RECEPTES = [
     {
         "num": 10, "nom": "Barquetes de gambes",
         "categoria": "Aperitius", "persones": 4,
+        "tipus_ingredients": ["Mariscs"],
         "ingredients": ["12 barquetes de pasta", "200 g de gambes pelades", "salsa de maionesa", "enciam", "tomàquet"],
         "instruccions": "Coure les gambes en aigua bullint amb sal. Escórrer i refredar. Posar una mica d'enciam picat a cada barqueta, les gambes per sobre i cobrir amb maionesa. Decorar amb un tros de tomàquet.",
         "temps": "20 min", "dificultat": "Fàcil"
@@ -22,6 +24,7 @@ RECEPTES = [
     {
         "num": 20, "nom": "Amanida russa",
         "categoria": "Aperitius", "persones": 6,
+        "tipus_ingredients": ["Peix", "Ous", "Verdures"],
         "ingredients": ["3 patates", "2 pastanagues", "150 g de pèsols", "2 ous durs", "100 g de tonyina", "maionesa", "sal"],
         "instruccions": "Coure les patates i pastanagues en daus a l'aigua amb sal. Coure els pèsols. Barrejar tot amb la tonyina esmicolada i els ous picats. Lligar amb abundant maionesa. Refredar abans de servir.",
         "temps": "40 min", "dificultat": "Fàcil"
@@ -29,6 +32,7 @@ RECEPTES = [
     {
         "num": 25, "nom": "Ou farcit amb tonyina",
         "categoria": "Aperitius", "persones": 4,
+        "tipus_ingredients": ["Peix", "Ous"],
         "ingredients": ["6 ous durs", "100 g de tonyina en oli", "2 cullerades de maionesa", "sal", "julivert"],
         "instruccions": "Partir els ous per la meitat i treure els rovells. Barrejar els rovells amb la tonyina escorreguda i la maionesa. Farcir les meitats d'ou amb aquesta barreja. Decorar amb julivert picat.",
         "temps": "20 min", "dificultat": "Fàcil"
@@ -36,6 +40,7 @@ RECEPTES = [
     {
         "num": 35, "nom": "Croquetes de pernil",
         "categoria": "Aperitius", "persones": 6,
+        "tipus_ingredients": ["Carn", "Làctics", "Ous"],
         "ingredients": ["100 g de pernil serrà", "50 g de mantequilla", "70 g de farina", "500 ml de llet", "2 ous", "pa ratllat", "oli per fregir", "sal", "nou moscada"],
         "instruccions": "Fer una beixamel espessa amb la mantequilla, farina i llet. Afegir el pernil picat, sal i nou moscada. Deixar refredar. Formar les croquetes, enrebornar amb ou i pa ratllat, i fregir en oli ben calent.",
         "temps": "1 h + repòs", "dificultat": "Mitjana"
@@ -43,8 +48,9 @@ RECEPTES = [
     {
         "num": 50, "nom": "Pa de motlle amb xampinyons i formatge",
         "categoria": "Aperitius", "persones": 4,
+        "tipus_ingredients": ["Verdures", "Làctics"],
         "ingredients": ["8 llesques de pa de motlle", "200 g de xampinyons", "100 g de formatge ratllat", "mantequilla", "sal", "pebre"],
-        "instruccions": "Saltejaar els xampinyons laminats amb mantequilla, sal i pebre. Torrar lleugerament el pa. Posar els xampinyons sobre cada llesca i cobrir amb formatge ratllat. Gratinar al forn uns 5 minuts.",
+        "instruccions": "Saltejar els xampinyons laminats amb mantequilla, sal i pebre. Torrar lleugerament el pa. Posar els xampinyons sobre cada llesca i cobrir amb formatge ratllat. Gratinar al forn uns 5 minuts.",
         "temps": "20 min", "dificultat": "Fàcil"
     },
 
@@ -52,6 +58,7 @@ RECEPTES = [
     {
         "num": 63, "nom": "Salsa de tomàquet",
         "categoria": "Salses i Sopes", "persones": 6,
+        "tipus_ingredients": ["Verdures"],
         "ingredients": ["1 kg de tomàquets madurs", "1 ceba", "2 grans d'all", "4 cullerades d'oli", "1 cullerada de sucre", "sal"],
         "instruccions": "Sofregir la ceba i l'all picats en oli. Afegir els tomàquets pelats i trossejats. Afegir sucre i sal. Coure a foc lent 30 minuts remenant de tant en tant. Passar pel passapurés.",
         "temps": "45 min", "dificultat": "Fàcil"
@@ -59,6 +66,7 @@ RECEPTES = [
     {
         "num": 70, "nom": "Salsa maionesa",
         "categoria": "Salses i Sopes", "persones": 4,
+        "tipus_ingredients": ["Ous"],
         "ingredients": ["2 rovells d'ou", "200 ml d'oli de gira-sol", "1 cullerada de suc de llimona", "sal"],
         "instruccions": "Posar els rovells en un bol amb la sal i el suc de llimona. Anar afegint l'oli en fil prim sense parar de batre fins obtenir una emulsió ferma.",
         "temps": "10 min", "dificultat": "Fàcil"
@@ -66,6 +74,7 @@ RECEPTES = [
     {
         "num": 75, "nom": "Salsa beixamel",
         "categoria": "Salses i Sopes", "persones": 4,
+        "tipus_ingredients": ["Làctics"],
         "ingredients": ["50 g de mantequilla", "50 g de farina", "500 ml de llet", "sal", "nou moscada"],
         "instruccions": "Fondre la mantequilla a foc mig. Afegir la farina i remenar 2 minuts. Incorporar la llet calenta poc a poc sense deixar de remenar. Coure 10 minuts. Amanir amb sal i nou moscada.",
         "temps": "20 min", "dificultat": "Fàcil"
@@ -73,6 +82,7 @@ RECEPTES = [
     {
         "num": 99, "nom": "Salsa romesco",
         "categoria": "Salses i Sopes", "persones": 6,
+        "tipus_ingredients": ["Verdures", "Fruits Secs"],
         "ingredients": ["4 tomàquets", "1 cabeça d'alls", "2 nyores", "50 g d'ametlles torrades", "50 g d'avellanes torrades", "4 cullerades de vinagre", "oli d'oliva", "sal"],
         "instruccions": "Torrar al forn els tomàquets i els alls. Remullar les nyores en aigua calenta. Triturar tots els ingredients fins obtenir una salsa espessa. Amanir i acabar amb un bon raig d'oli.",
         "temps": "30 min", "dificultat": "Fàcil"
@@ -80,6 +90,7 @@ RECEPTES = [
     {
         "num": 110, "nom": "Sopa de ceba",
         "categoria": "Salses i Sopes", "persones": 4,
+        "tipus_ingredients": ["Verdures", "Làctics"],
         "ingredients": ["500 g de ceba", "50 g de mantequilla", "1 L de brou de carn", "4 llesques de pa", "100 g de formatge gratinat", "sal", "pebre"],
         "instruccions": "Caramel·litzar la ceba laminada amb mantequilla a foc lent durant 30 minuts. Afegir el brou i coure 20 minuts. Servir en bols individuals, posar una llesca de pa per sobre i cobrir amb formatge. Gratinar.",
         "temps": "1 h", "dificultat": "Fàcil"
@@ -87,6 +98,7 @@ RECEPTES = [
     {
         "num": 120, "nom": "Sopa de fideus",
         "categoria": "Salses i Sopes", "persones": 4,
+        "tipus_ingredients": ["Pasta", "Verdures"],
         "ingredients": ["150 g de fideus fins", "1.5 L de brou de pollastre", "1 tomàquet", "1 ceba", "oli", "sal"],
         "instruccions": "Sofregir la ceba i el tomàquet. Afegir el brou i portar a ebullició. Incorporar els fideus i coure 8 minuts fins que estiguin tous. Rectificar de sal.",
         "temps": "25 min", "dificultat": "Fàcil"
@@ -94,6 +106,7 @@ RECEPTES = [
     {
         "num": 130, "nom": "Gazpacho",
         "categoria": "Salses i Sopes", "persones": 6,
+        "tipus_ingredients": ["Verdures"],
         "ingredients": ["1 kg de tomàquets madurs", "1 cogombre", "1 pebrot verd", "2 grans d'all", "100 ml d'oli d'oliva", "3 cullerades de vinagre", "sal", "pa dur remullat"],
         "instruccions": "Triturar tots els ingredients fins obtenir una textura fina. Colar si es desitja. Refredar a la nevera almenys 2 hores. Servir fred amb guarnició de tomàquet, cogombre i pebrot en daus.",
         "temps": "15 min + 2 h nevera", "dificultat": "Fàcil"
@@ -101,6 +114,7 @@ RECEPTES = [
     {
         "num": 148, "nom": "Sopa d'horta",
         "categoria": "Salses i Sopes", "persones": 6,
+        "tipus_ingredients": ["Verdures"],
         "ingredients": ["2 patates", "2 pastanagues", "1 carabassó", "150 g de mongeta verda", "1 ceba", "2 tomàquets", "oli", "sal", "pebre"],
         "instruccions": "Sofregir la ceba i el tomàquet. Afegir les verdures tallades en daus i cobrir amb aigua. Coure 30 minuts fins que tot estigui tendre. Amanir amb sal i pebre.",
         "temps": "45 min", "dificultat": "Fàcil"
@@ -110,6 +124,7 @@ RECEPTES = [
     {
         "num": 188, "nom": "Escudella i carn d'olla",
         "categoria": "Llegums", "persones": 6,
+        "tipus_ingredients": ["Llegums", "Carn", "Verdures"],
         "ingredients": ["300 g de cigrons", "200 g de carn de vedella", "1 os de pernil", "2 pastanagues", "2 patates", "1 col", "fideus o arròs", "sal"],
         "instruccions": "Remullar els cigrons la nit anterior. Posar a coure en olla gran amb la carn, l'os i les verdures cobertes d'aigua freda. Coure 2 hores a foc lent. Colar el brou i coure-hi la pasta. Servir la sopa primer i després la carn i les verdures.",
         "temps": "2 h 30 min", "dificultat": "Mitjana"
@@ -117,6 +132,7 @@ RECEPTES = [
     {
         "num": 195, "nom": "Llenties estofades",
         "categoria": "Llegums", "persones": 4,
+        "tipus_ingredients": ["Llegums", "Carn"],
         "ingredients": ["300 g de llenties", "100 g de xoriço", "1 ceba", "2 grans d'all", "1 fulla de llorer", "pimentó dolç", "oli", "sal"],
         "instruccions": "Sofregir la ceba i l'all en oli. Afegir el pimentó i les llenties. Cobrir amb aigua i afegir el xoriço i el llorer. Coure 40 minuts a foc mig fins que les llenties estiguin tendres.",
         "temps": "1 h", "dificultat": "Fàcil"
@@ -124,6 +140,7 @@ RECEPTES = [
     {
         "num": 198, "nom": "Mongetes blanques amb botifarra",
         "categoria": "Llegums", "persones": 4,
+        "tipus_ingredients": ["Llegums", "Carn"],
         "ingredients": ["400 g de mongetes blanques cuites", "2 botifarres negres", "1 ceba", "2 tomàquets", "oli d'oliva", "sal", "pebre"],
         "instruccions": "Sofregir la ceba fins que sigui daurada. Afegir el tomàquet i coure 10 minuts. Incorporar les mongetes i barrejar bé. Fregir les botifarres a part i servir per sobre.",
         "temps": "30 min", "dificultat": "Fàcil"
@@ -131,6 +148,7 @@ RECEPTES = [
     {
         "num": 210, "nom": "Cigrons amb espinacs",
         "categoria": "Llegums", "persones": 4,
+        "tipus_ingredients": ["Llegums", "Verdures"],
         "ingredients": ["400 g de cigrons cuits", "500 g d'espinacs", "3 grans d'all", "1 llesca de pa", "comí", "pimentó", "oli d'oliva", "sal"],
         "instruccions": "Fregir l'all i el pa en oli. Triturar amb el comí i pimentó. Sofregir els espinacs. Afegir els cigrons i la picada. Remenar i coure 10 minuts. Rectificar de sal.",
         "temps": "30 min", "dificultat": "Fàcil"
@@ -138,6 +156,7 @@ RECEPTES = [
     {
         "num": 225, "nom": "Fabes amb cloïsses",
         "categoria": "Llegums", "persones": 4,
+        "tipus_ingredients": ["Llegums", "Mariscs"],
         "ingredients": ["400 g de fabes grosses", "500 g de cloïsses", "1 ceba", "2 grans d'all", "julivert", "1 got de vi blanc", "oli", "sal"],
         "instruccions": "Coure les fabes prèviament remullades fins que estiguin tendres. Obrir les cloïsses al vapor amb el vi. Sofregir ceba i all, afegir les fabes i les cloïsses amb el seu suc. Coure 10 minuts i afegir julivert picat.",
         "temps": "1 h 30 min", "dificultat": "Mitjana"
@@ -147,6 +166,7 @@ RECEPTES = [
     {
         "num": 248, "nom": "Macarrons amb musclos al curri",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Pasta", "Mariscs", "Làctics"],
         "ingredients": ["400 g de macarrons", "500 g de musclos", "1 ceba", "200 ml de nata", "1 cullerada de curri", "oli", "sal"],
         "instruccions": "Coure la pasta al dente. Obrir els musclos al vapor i treure'ls de les closques. Sofregir la ceba, afegir el curri i la nata. Incorporar els musclos i la pasta escorreguda. Remenar i servir calent.",
         "temps": "30 min", "dificultat": "Fàcil"
@@ -154,6 +174,7 @@ RECEPTES = [
     {
         "num": 260, "nom": "Espaguetis a la carbonara",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Pasta", "Carn", "Ous", "Làctics"],
         "ingredients": ["400 g d'espaguetis", "150 g de bacó o panceta", "3 ous", "100 g de parmesà ratllat", "pebre negre", "sal"],
         "instruccions": "Coure la pasta al dente. Fregir el bacó en daus. Batre els ous amb el formatge i pebre. Barrejar la pasta calenta escorreguda amb els ous i el bacó fora del foc. L'escalfor de la pasta cou els ous.",
         "temps": "20 min", "dificultat": "Fàcil"
@@ -161,6 +182,7 @@ RECEPTES = [
     {
         "num": 275, "nom": "Arròs a la cubana",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Arròs", "Ous", "Fruita"],
         "ingredients": ["300 g d'arròs", "4 ous", "400 g de tomàquet fregit", "4 plàtans", "oli", "sal"],
         "instruccions": "Coure l'arròs en blanc. Fregir els ous ferrats. Fregir els plàtans partits per la meitat. Servir l'arròs en el plat, col·locar l'ou al damunt i el plàtan al costat, amb la salsa de tomàquet calenta.",
         "temps": "25 min", "dificultat": "Fàcil"
@@ -168,6 +190,7 @@ RECEPTES = [
     {
         "num": 290, "nom": "Paella valenciana",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 6,
+        "tipus_ingredients": ["Arròs", "Carn", "Verdures"],
         "ingredients": ["500 g d'arròs", "300 g de pollastre", "200 g de conill", "200 g de bajoquetes", "100 g de garrofó", "safrà", "pimentó dolç", "tomàquet", "oli", "sal"],
         "instruccions": "Sofregir el pollastre i conill fins daurar. Afegir tomàquet, pimentó i verdures. Incorporar l'arròs, el safrà i cobrir amb brou calent (doble de brou que d'arròs). Coure 18 minuts sense remenar. Reposar 5 minuts.",
         "temps": "1 h", "dificultat": "Difícil"
@@ -175,6 +198,7 @@ RECEPTES = [
     {
         "num": 297, "nom": "Amanida fantasia",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Verdures", "Làctics", "Fruits Secs", "Fruita"],
         "ingredients": ["enciam", "tomàquets cirerers", "1 alvocat", "100 g de gorgonzola", "nous", "vinagreta de mel i mostassa"],
         "instruccions": "Rentar i assecar les fulles d'enciam. Tallar l'alvocat en daus. Disposar tots els ingredients en una safata. Esmicolar el formatge per sobre i escampar les nous. Amanir amb la vinagreta.",
         "temps": "15 min", "dificultat": "Fàcil"
@@ -182,6 +206,7 @@ RECEPTES = [
     {
         "num": 320, "nom": "Espinacs a la catalana",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Verdures", "Fruits Secs"],
         "ingredients": ["1 kg d'espinacs", "50 g de panses", "50 g de pinyons", "3 grans d'all", "oli d'oliva", "sal"],
         "instruccions": "Bullir els espinacs 5 minuts i escórrer bé. Daurar els alls laminats en oli. Afegir els espinacs, les panses i els pinyons. Saltar 5 minuts a foc fort. Rectificar de sal.",
         "temps": "20 min", "dificultat": "Fàcil"
@@ -189,6 +214,7 @@ RECEPTES = [
     {
         "num": 350, "nom": "Arròs negre amb sípia",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Arròs", "Peix"],
         "ingredients": ["400 g d'arròs", "500 g de sípia", "tinta de calamar", "1 ceba", "2 grans d'all", "tomàquet", "brou de peix", "oli", "sal"],
         "instruccions": "Sofregir la ceba i l'all. Afegir la sípia neta en trossos i daurar. Incorporar el tomàquet i la tinta diluïda en brou. Afegir l'arròs i cobrir amb brou calent. Coure 18 minuts. Servir amb allioli.",
         "temps": "50 min", "dificultat": "Mitjana"
@@ -196,6 +222,7 @@ RECEPTES = [
     {
         "num": 395, "nom": "Pebrots farcits de carn i arròs",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Carn", "Arròs", "Verdures"],
         "ingredients": ["4 pebrots vermells", "300 g de carn picada", "100 g d'arròs", "1 ceba", "2 tomàquets", "oli", "sal", "pebre"],
         "instruccions": "Sofregir la ceba i el tomàquet. Afegir la carn i l'arròs. Farcir els pebrots i col·locar en una safata de forn. Cobrir amb salsa de tomàquet i enfornar a 180°C 45 minuts.",
         "temps": "1 h 15 min", "dificultat": "Mitjana"
@@ -203,6 +230,7 @@ RECEPTES = [
     {
         "num": 420, "nom": "Truita de patates",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Ous", "Verdures"],
         "ingredients": ["500 g de patates", "6 ous", "1 ceba (opcional)", "oli d'oliva abundant", "sal"],
         "instruccions": "Pelar i tallar les patates en llesques fines. Fregir en molt d'oli a foc mig fins que estiguin tendres. Escórrer. Batre els ous amb sal, afegir les patates. Cuinar en paella amb poc oli a foc mig. Girar amb un plat. Repetir per l'altra banda.",
         "temps": "30 min", "dificultat": "Fàcil"
@@ -210,6 +238,7 @@ RECEPTES = [
     {
         "num": 444, "nom": "Ous durs amb salsa caçadora",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Ous", "Verdures"],
         "ingredients": ["6 ous durs", "200 g de xampinyons", "1 ceba", "1 got de vi blanc", "400 g de tomàquet", "herbes provençals", "oli", "sal"],
         "instruccions": "Sofregir la ceba i els xampinyons. Afegir el vi i reduir. Incorporar el tomàquet i les herbes, coure 20 minuts. Partir els ous per la meitat i cobrir amb la salsa calenta.",
         "temps": "35 min", "dificultat": "Fàcil"
@@ -217,6 +246,7 @@ RECEPTES = [
     {
         "num": 493, "nom": "Truita de patates guisada",
         "categoria": "Pastes, Verdures, Arròs i Ous", "persones": 4,
+        "tipus_ingredients": ["Ous", "Verdures"],
         "ingredients": ["1 truita de patates", "1 ceba", "2 tomàquets", "1 got de vi blanc", "brou", "oli", "sal"],
         "instruccions": "Preparar la truita de patates senzilla. Sofregir la ceba i el tomàquet. Afegir vi i brou. Posar la truita al tall dins la salsa i coure 15 minuts a foc lent.",
         "temps": "50 min", "dificultat": "Fàcil"
@@ -226,6 +256,7 @@ RECEPTES = [
     {
         "num": 515, "nom": "Bacallà a la llauna",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Peix"],
         "ingredients": ["800 g de bacallà dessalat", "4 grans d'all", "pimentó dolç", "farina", "oli d'oliva", "sal"],
         "instruccions": "Enfarinar els talls de bacallà i fregir fins daurar. Col·locar en una safata de forn. Sofregir els alls laminats, afegir pimentó i tirar per sobre del bacallà. Enfornar 15 minuts a 200°C.",
         "temps": "30 min", "dificultat": "Fàcil"
@@ -233,6 +264,7 @@ RECEPTES = [
     {
         "num": 530, "nom": "Calamars a la romana",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Mariscs", "Ous"],
         "ingredients": ["600 g de calamars en anelles", "150 g de farina", "2 ous", "oli per fregir", "sal", "llimona"],
         "instruccions": "Assecar bé les anelles de calamar. Passar per farina i ou batut. Fregir en oli abundant ben calent fins que estiguin daurades i cruixents. Escórrer en paper absorbent. Servir amb llimona.",
         "temps": "25 min", "dificultat": "Fàcil"
@@ -240,6 +272,7 @@ RECEPTES = [
     {
         "num": 543, "nom": "Calamar farcit",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Mariscs", "Ous"],
         "ingredients": ["4 calamars grans", "ceba", "tomàquet", "pa ratllat", "ou", "vi blanc", "oli", "sal", "julivert"],
         "instruccions": "Netejar els calamars reservant les potes. Picar les potes amb ceba i julivert. Afegir ou i pa ratllat. Farcir els cossos i tancar amb un escuradents. Sofregir, afegir tomàquet i vi i coure 30 minuts.",
         "temps": "1 h", "dificultat": "Mitjana"
@@ -247,6 +280,7 @@ RECEPTES = [
     {
         "num": 575, "nom": "Rap a l'all cremat",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Peix"],
         "ingredients": ["800 g de rap en rodanxes", "1 cabeça d'alls", "1 got de vi blanc", "brou de peix", "oli d'oliva", "sal", "julivert"],
         "instruccions": "Daurar els alls sencers en oli fins que estiguin molt foscos. Afegir el rap salpebrat, el vi i el brou. Coure 15 minuts a foc mig. Afegir julivert picat al final.",
         "temps": "30 min", "dificultat": "Fàcil"
@@ -254,6 +288,7 @@ RECEPTES = [
     {
         "num": 593, "nom": "Rodanxes de lluç a la planxa",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Peix"],
         "ingredients": ["4 rodanxes de lluç", "4 grans d'all", "julivert", "oli d'oliva", "sal", "suc de llimona"],
         "instruccions": "Salpebrar el lluç. Cuinar a la planxa ben calenta amb un raig d'oli, uns 4 minuts per banda. Picar all i julivert, barrejar amb oli i suc de llimona. Servir la salsa per sobre.",
         "temps": "20 min", "dificultat": "Fàcil"
@@ -261,6 +296,7 @@ RECEPTES = [
     {
         "num": 620, "nom": "Musclos al vapor amb vi blanc",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Mariscs"],
         "ingredients": ["2 kg de musclos", "1 got de vi blanc", "2 grans d'all", "julivert", "pebre negre"],
         "instruccions": "Netejar bé els musclos. Posar en olla gran amb l'all, el vi i el pebre. Tapar i coure a foc fort fins que s'obrin (uns 5 minuts). Descarta els que no s'hagin obert. Servir amb suc i julivert.",
         "temps": "15 min", "dificultat": "Fàcil"
@@ -268,6 +304,7 @@ RECEPTES = [
     {
         "num": 643, "nom": "Truites a la molinera",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Peix", "Làctics"],
         "ingredients": ["4 truites de riu", "farina", "100 g de mantequilla", "suc de llimona", "julivert", "sal"],
         "instruccions": "Salpebrar les truites i enfarinar-les. Cuinar en mantequilla calenta 4 minuts per banda fins daurar. Retirar i en la mateixa paella afegir més mantequilla, llimona i julivert. Tirar per sobre de les truites.",
         "temps": "20 min", "dificultat": "Fàcil"
@@ -275,6 +312,7 @@ RECEPTES = [
     {
         "num": 670, "nom": "Gambes a l'ajillo",
         "categoria": "Peixos i Mariscs", "persones": 4,
+        "tipus_ingredients": ["Mariscs"],
         "ingredients": ["500 g de gambes pelades", "6 grans d'all", "1 guindilla", "oli d'oliva", "sal", "julivert"],
         "instruccions": "Escalfar l'oli en cassola de fang. Afegir els alls laminats i la guindilla. Quan els alls comencin a daurar afegir les gambes salpebrades. Coure 3-4 minuts. Servir molt calent amb julivert picat.",
         "temps": "10 min", "dificultat": "Fàcil"
@@ -284,6 +322,7 @@ RECEPTES = [
     {
         "num": 720, "nom": "Pollastre al forn amb herbes",
         "categoria": "Carns i Aus", "persones": 6,
+        "tipus_ingredients": ["Carn"],
         "ingredients": ["1 pollastre d'1.5 kg", "farigola", "romaní", "4 grans d'all", "1 llimona", "oli d'oliva", "sal", "pebre"],
         "instruccions": "Fregar el pollastre amb sal, pebre i herbes. Introduir l'all i el llimó al ventre. Regar amb oli i coure al forn a 200°C uns 60-70 minuts, regant amb els seus sucs cada 20 minuts.",
         "temps": "1 h 30 min", "dificultat": "Fàcil"
@@ -291,6 +330,7 @@ RECEPTES = [
     {
         "num": 743, "nom": "Filets fregits amb llimona i mantequilla",
         "categoria": "Carns i Aus", "persones": 4,
+        "tipus_ingredients": ["Carn", "Làctics"],
         "ingredients": ["4 filets de vedella", "50 g de mantequilla", "suc de llimona", "julivert", "oli", "sal", "pebre"],
         "instruccions": "Salpebrar els filets. Fregir en oli molt calent 2-3 minuts per banda. Retirar. En la mateixa paella, fondre la mantequilla amb el suc de llimona i julivert picat. Tirar per sobre.",
         "temps": "15 min", "dificultat": "Fàcil"
@@ -298,6 +338,7 @@ RECEPTES = [
     {
         "num": 760, "nom": "Estofat de vedella",
         "categoria": "Carns i Aus", "persones": 6,
+        "tipus_ingredients": ["Carn", "Verdures"],
         "ingredients": ["1 kg de vedella per estofar", "2 cebes", "3 pastanagues", "2 patates", "1 got de vi negre", "brou", "farina", "oli", "sal", "pebre", "llorer"],
         "instruccions": "Enfarinar la carn i daurar en oli. Retirar. Sofregir les cebes, pastanagues i afegir la carn. Incorporar el vi, el brou i el llorer. Coure 1 hora a foc lent. Afegir les patates i continuar 30 minuts més.",
         "temps": "2 h", "dificultat": "Mitjana"
@@ -305,6 +346,7 @@ RECEPTES = [
     {
         "num": 780, "nom": "Costelles de xai a la brasa",
         "categoria": "Carns i Aus", "persones": 4,
+        "tipus_ingredients": ["Carn"],
         "ingredients": ["12 costelles de xai", "farigola", "romaní", "4 grans d'all", "oli d'oliva", "sal", "pebre"],
         "instruccions": "Marinar les costelles amb les herbes, l'all picat, l'oli, sal i pebre durant 2 hores. Cuinar a la brasa o planxa ben calenta 3-4 minuts per banda. Servir immediatament.",
         "temps": "15 min + 2 h marinat", "dificultat": "Fàcil"
@@ -312,6 +354,7 @@ RECEPTES = [
     {
         "num": 800, "nom": "Pollastre a l'ast",
         "categoria": "Carns i Aus", "persones": 4,
+        "tipus_ingredients": ["Carn"],
         "ingredients": ["1 pollastre", "all", "llimona", "sal gruixuda", "pebre", "oli"],
         "instruccions": "Condimentar el pollastre per dins i per fora. Enfornar a 220°C durant 1 hora girant a mitja cocció. La pell ha de quedar cruixent i daurada.",
         "temps": "1 h 15 min", "dificultat": "Fàcil"
@@ -319,6 +362,7 @@ RECEPTES = [
     {
         "num": 820, "nom": "Guatlles guisades amb ceba",
         "categoria": "Carns i Aus", "persones": 4,
+        "tipus_ingredients": ["Carn", "Verdures"],
         "ingredients": ["8 guatlles", "4 cebes", "1 got de vi blanc", "brou", "farigola", "oli", "sal", "pebre"],
         "instruccions": "Daurar les guatlles salpebrades en oli. Afegir la ceba en juliana i sofregir fins caramel·litzar. Incorporar el vi, el brou i la farigola. Coure tapades 30 minuts a foc lent.",
         "temps": "50 min", "dificultat": "Fàcil"
@@ -328,6 +372,7 @@ RECEPTES = [
     {
         "num": 859, "nom": "Conill amb taronja",
         "categoria": "Caça", "persones": 4,
+        "tipus_ingredients": ["Caça", "Fruita"],
         "ingredients": ["1 conill trossejat", "2 taronges (suc i ratlladura)", "1 ceba", "2 grans d'all", "farigola", "vi blanc", "oli", "sal"],
         "instruccions": "Daurar els trossos de conill en oli. Sofregir la ceba i l'all. Afegir el vi, el suc i la ratlladura de taronja i la farigola. Coure tapat 40 minuts fins que la carn sigui tendra.",
         "temps": "1 h", "dificultat": "Fàcil"
@@ -335,6 +380,7 @@ RECEPTES = [
     {
         "num": 870, "nom": "Llebre amb salsa de vi negre",
         "categoria": "Caça", "persones": 4,
+        "tipus_ingredients": ["Caça"],
         "ingredients": ["1 llebre trossejada", "1 ampolla de vi negre", "2 cebes", "pastanagues", "llorer", "farigola", "xocolata", "oli", "sal"],
         "instruccions": "Marinar la llebre en vi amb les verdures i les herbes 24 hores. Daurar la carn i les verdures. Afegir el vi del marinat i coure 1.5 hores. Afegir xocolata ratllada al final per espessir la salsa.",
         "temps": "2 h + 24 h marinat", "dificultat": "Difícil"
@@ -342,6 +388,7 @@ RECEPTES = [
     {
         "num": 895, "nom": "Guatlles guisades",
         "categoria": "Caça", "persones": 4,
+        "tipus_ingredients": ["Caça", "Carn"],
         "ingredients": ["8 guatlles", "100 g de bacó", "1 ceba", "1 got de conyac", "brou", "llorer", "oli", "sal", "pebre"],
         "instruccions": "Embolicar les guatlles amb bacó i lligar. Daurar en oli. Sofregir la ceba, afegir el conyac i flambejar. Incorporar brou i llorer. Coure 25 minuts a foc lent.",
         "temps": "45 min", "dificultat": "Mitjana"
@@ -351,6 +398,7 @@ RECEPTES = [
     {
         "num": 950, "nom": "Flam casolà",
         "categoria": "Postres", "persones": 6,
+        "tipus_ingredients": ["Ous", "Làctics"],
         "ingredients": ["500 ml de llet", "4 ous", "100 g de sucre", "essència de vainilla", "caramel líquid"],
         "instruccions": "Caramel·litzar el sucre al motlle. Batre els ous amb la llet, el sucre i la vainilla. Abocar al motlle sobre el caramel. Coure al bany maria al forn a 160°C 45 minuts. Refredar i desemmotllar.",
         "temps": "1 h 15 min", "dificultat": "Fàcil"
@@ -358,6 +406,7 @@ RECEPTES = [
     {
         "num": 970, "nom": "Crema catalana",
         "categoria": "Postres", "persones": 6,
+        "tipus_ingredients": ["Ous", "Làctics"],
         "ingredients": ["1 L de llet", "6 rovells d'ou", "150 g de sucre", "40 g de midó de blat de moro", "1 pell de llimona", "1 canyella en rama"],
         "instruccions": "Bullir la llet amb la llimona i la canyella. Batre els rovells amb el sucre i el midó. Incorporar la llet calenta sense parar de remenar. Coure fins espessir. Servir en cassoletes i cremar el sucre amb un bufador.",
         "temps": "30 min + refrigeració", "dificultat": "Fàcil"
@@ -365,6 +414,7 @@ RECEPTES = [
     {
         "num": 985, "nom": "Arròs amb llet",
         "categoria": "Postres", "persones": 6,
+        "tipus_ingredients": ["Arròs", "Làctics"],
         "ingredients": ["200 g d'arròs rodó", "1 L de llet", "150 g de sucre", "1 pell de llimona", "1 canyella en rama", "canyella en pols"],
         "instruccions": "Coure l'arròs amb la llet, la canyella i la llimona a foc lent 30 minuts remenant sovint. Afegir el sucre als 20 minuts. Servir en bols individuals espolvoreats amb canyella en pols.",
         "temps": "40 min", "dificultat": "Fàcil"
@@ -372,6 +422,7 @@ RECEPTES = [
     {
         "num": 1000, "nom": "Pastís de xocolata",
         "categoria": "Postres", "persones": 8,
+        "tipus_ingredients": ["Ous", "Làctics"],
         "ingredients": ["200 g de xocolata negra", "200 g de sucre", "200 g de mantequilla", "4 ous", "150 g de farina", "1 sobre de llevat", "sal"],
         "instruccions": "Fondre la xocolata amb la mantequilla. Batre els ous amb el sucre fins espumar. Incorporar la xocolata i la farina tamissada amb el llevat. Abocar al motlle untat. Enfornar a 180°C 30 minuts.",
         "temps": "45 min", "dificultat": "Fàcil"
@@ -379,6 +430,7 @@ RECEPTES = [
     {
         "num": 1020, "nom": "Braç de gitano",
         "categoria": "Postres", "persones": 8,
+        "tipus_ingredients": ["Ous", "Làctics"],
         "ingredients": ["4 ous", "100 g de sucre", "100 g de farina", "crema pastissera o nata"],
         "instruccions": "Batre ous amb sucre fins triplicar volum. Incorporar farina amb moviments envolvents. Escampar en safata de forn folrada. Enfornar a 200°C 10 minuts. Enrotllar en calent sobre un drap humit. Deixar refredar, omplir i tornar a enrotllar.",
         "temps": "40 min", "dificultat": "Mitjana"
@@ -386,6 +438,7 @@ RECEPTES = [
     {
         "num": 1050, "nom": "Pomes al forn",
         "categoria": "Postres", "persones": 4,
+        "tipus_ingredients": ["Fruita"],
         "ingredients": ["4 pomes golden", "4 cullerades de sucre morè", "40 g de mantequilla", "canyella", "1 got de vi dolç o sidra"],
         "instruccions": "Treure el cor de les pomes sense pelar-les. Farcir el forat amb sucre, mantequilla i canyella. Col·locar en safata de forn, afegir el vi. Enfornar a 180°C 30-40 minuts fins que estiguin tendres.",
         "temps": "45 min", "dificultat": "Fàcil"
@@ -393,6 +446,7 @@ RECEPTES = [
     {
         "num": 1070, "nom": "Natilles",
         "categoria": "Postres", "persones": 6,
+        "tipus_ingredients": ["Ous", "Làctics"],
         "ingredients": ["1 L de llet", "6 rovells d'ou", "150 g de sucre", "30 g de midó", "1 pell de llimona", "canyella en pols"],
         "instruccions": "Bullir la llet amb la llimona. Batre rovells amb sucre i midó. Incorporar la llet calenta i coure a foc molt lent sense deixar de remenar fins espessir. Servir fred amb canyella.",
         "temps": "25 min", "dificultat": "Fàcil"
@@ -401,3 +455,6 @@ RECEPTES = [
 
 CATEGORIES = sorted(set(r["categoria"] for r in RECEPTES))
 DIFICULTATS = ["Fàcil", "Mitjana", "Difícil"]
+TIPUS_INGREDIENTS = sorted(set(
+    t for r in RECEPTES for t in r["tipus_ingredients"]
+))
