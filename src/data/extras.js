@@ -866,4 +866,471 @@ export const EXTRAS = {
     ],
     presentacio: "Serveix en tasses de fang tradicionals. Decora amb canyella en pols i una galeta Maria.",
   },
+
+  // ── Aperitius 17–62 ──────────────────────────────────────────────
+  17: {
+    passos: [
+      "Prepara la massa de vol-au-vent o usa cases comprades. Si les fas casolanes: desglacia la massa de full, talla cercles de 8 cm, treu el centre de la meitat per fer les tapes. Cou a 200 °C 15 minuts fins que inflin i daurin.",
+      "Neteja i lamina els xampinyons. Sofregeix amb mantequilla i 1 gra d'all a foc fort fins que perdin tota l'humitat (uns 7 min). Afegeix el julivert picat i salpebra.",
+      "Prepara la beixamel: fon mantequilla, incorpora la farina i cou 2 minuts remenant. Afegeix la llet calenta poc a poc fins obtenir una salsa espessa. Incorpora els xampinyons.",
+      "Omple cada vol-au-vent just abans de servir. Col·loca la tapeta per sobre.",
+    ],
+    consells: [
+      "Omple els vol-au-vent en el darrer moment per evitar que la massa s'estovi.",
+      "Pots aromatitzar la beixamel amb una mica de nou moscada i una cullerada de conyac.",
+    ],
+    presentacio: "Serveix calents sobre una safata folrada amb paper blanc. Decora amb julivert fresc.",
+  },
+  18: {
+    passos: [
+      "Prepara la beixamel espessa: fon 60 g de mantequilla, afegeix 80 g de farina i cou 2 minuts. Incorpora 500 ml de llet calenta poc a poc sense deixar de remenar. Afegeix el formatge ratllat, nou moscada, sal i pebre.",
+      "Aboca en una safata plana untada amb oli. Deixa refredar completament (preferiblement a la nevera 2 hores).",
+      "Talla en rectangles o cilindres. Enreborna per farina, ou batut i pa ratllat.",
+      "Fregeix en oli abundant a 175 °C fins que estiguin ben daurades. Escorre sobre paper absorbent.",
+    ],
+    consells: [
+      "La massa de les croquetes ha d'estar ben freda i compacta per poder enrebornar-les sense que es desfacin.",
+      "Congelar les croquetes formades facilita molt la feina: treu-les 10 minuts abans de fregir.",
+    ],
+    presentacio: "Serveix calentes en un plat llarg amb maionesa de llimona o aioli al costat.",
+  },
+  19: {
+    passos: [
+      "Cou els ous de codorniu en aigua bullint exactament 4 minuts. Refreda immediatament en gel. Pela amb compte (la closca és fràgil).",
+      "Parteix cada ou per la meitat. Col·loca sobre una tosta petita o en una cullera de degustació.",
+      "Posa una petita quantitat de maionesa per sobre amb una màniga o biberó.",
+      "Corona amb una mica de caviar o huevas de lumpo. Serveix immediatament ben fred.",
+    ],
+    consells: [
+      "Els ous de codorniu s'han de pelar amb molta cura sota l'aigüeta freda.",
+      "Si uses huevas de lumpo vermelles i negres alternades, el resultat és molt vistós.",
+    ],
+    presentacio: "Serveix sobre una base de gel picat o en una safata negra per destacar els colors.",
+  },
+  21: {
+    passos: [
+      "Sofregeix la ceba picada fina en mantequilla fins que estigui molt tova i daurada (15-20 min a foc baix). Reserva.",
+      "En la mateixa paella, cuina els fetges de pollastre 3-4 minuts per cada costat a foc fort. Han de quedar lleugerament rosats per dins.",
+      "Tritura els fetges, la ceba, el brandy, el julivert i la mantequilla tova fins obtenir una pasta fina. Salpebra.",
+      "Aboca en un recipient i cobreix amb una capa de mantequilla fosa (actua de segell i conservant). Refrigera almenys 3 hores.",
+    ],
+    consells: [
+      "El secret és no sobrecoure els fetges: han de quedar lleugerament rosats per obtenir una textura sedosa.",
+      "El patè aguanta 4-5 dies a la nevera si la capa de mantequilla el protegeix bé.",
+    ],
+    presentacio: "Serveix en un bol de terrissa amb melba toast o llesques de pa de pagès torrat i cornichons.",
+  },
+  22: {
+    passos: [
+      "Parteix els tomàquets per la meitat. Frega la superfície de cada llesca de pa de pagès amb la cara tallada del tomàquet fent moviments circulars fins impregnar bé. Llança el tomàquet (ja espremut).",
+      "Ruixa cada llesca amb un bon raig d'oli d'oliva verge extra i un pessic de sal de Maldon.",
+      "Col·loca per sobre l'embotit a elecció: pernil ibèric, fuet, llonganissa o botifarra.",
+    ],
+    consells: [
+      "La qualitat del pa és fonamental: ha de ser de massa mare, cruixent per fora i esponjós per dins.",
+      "Frega el pa en calent (recentment tortat) per una millor impregnació del tomàquet.",
+    ],
+    presentacio: "Serveix immediatament sobre una fusta de tallar. Ideal com a esmorzar o berenar casolà.",
+  },
+  23: {
+    passos: [
+      "Cou les gambes en aigua amb sal 2 minuts. Escorre i refreda. Pela i reserva.",
+      "Prepara la salsa golf: barreja maionesa amb ketchup (proporció 3:1), unes gotes de tabasco, unes gotes de Worcestershire i el suc de mitja llimona. Rectifica.",
+      "Posa les gambes en un plat de degustació o en copes. Cobreix amb la salsa golf.",
+    ],
+    consells: [
+      "La salsa golf guanya si la prepares unes hores abans perquè els sabors s'integrin.",
+      "Per una presentació elegant, serveix les gambes en copes de còctel amb la salsa al fons i les gambes penjant a la vora.",
+    ],
+    presentacio: "Guarneix amb una rodanxa de llimona i fulles de menta o anet.",
+  },
+  24: {
+    passos: [
+      "Dessala el bacallà 24 hores canviant l'aigua 3 vegades. Esmicola eliminant pells i espines.",
+      "Prepara la massa: barreja farina, llevat, un ou, llet i sal fins obtenir una massa de truita. Incorpora el bacallà esmicola i julivert picat.",
+      "Escalfa abundant oli a 175 °C. Amb dues culleres, deixa caure porcions de massa a l'oli. Fregeix 3-4 minuts girant fins daurar per tots costats.",
+      "Escorre sobre paper absorbent i serveix calents.",
+    ],
+    consells: [
+      "La massa ha de tenir prou consistència per mantenir la forma, però no massa espessa. Ajusta la llet si cal.",
+      "L'oli ha d'estar a la temperatura correcta: si és massa fred, els bunyols absorbiran greix; si és massa calent, es cremaran per fora i quedaran crus per dins.",
+    ],
+    presentacio: "Serveix en una cistella folrada amb paper. Ideal com a tapa o primer plat acompanyat d'allioli.",
+  },
+  26: {
+    passos: [
+      "Dessala el bacallà 24-36 h (canviant l'aigua 3-4 vegades). Cou uns minuts en aigua freda fins que arrenqui el bull. Escorre, refreda, desmolla i pica molt fi.",
+      "Prepara la beixamel ben espessa (igual que les croquetes de pernil). Barreja amb el bacallà picat, el julivert i una mica de nou moscada. Rectifica de sal.",
+      "Deixa refredar la massa a la nevera. Forma les croquetes. Enreborna per farina, ou i pa ratllat.",
+      "Fregeix en oli abundant a 175 °C fins daurades. Escorre i serveix calentes.",
+    ],
+    consells: ["El bacallà ha d'estar molt ben dessalat. Tasta la massa abans de salar per no passar-te."],
+    presentacio: "Serveix amb una salsa de tomàquet casolana o maionesa d'all.",
+  },
+  28: {
+    passos: [
+      "Talla el pa de pagès en llesques. Tosta lleugerament al forn o en una torradeira.",
+      "Talla el formatge de cabra en rodanxes de 5-6 mm. Col·loca una rodanxa sobre cada llesca de pa.",
+      "Gratina sota el grill del forn 3-4 minuts fins que el formatge estigui tou i lleugerament daurat.",
+      "Fora del forn, afegeix una culleradeta de mel per sobre i unes nous picades. Serveix immediatament.",
+    ],
+    consells: [
+      "La mel de farigola o de romaní complementa molt bé el formatge de cabra.",
+      "Pots afegir un raig d'oli d'oliva i unes fulles de ruca fresca per sobre per un toc fresc.",
+    ],
+    presentacio: "Serveix immediatament, mentre el formatge és calent. Ideal com a aperitiu o entrante.",
+  },
+  30: {
+    passos: [
+      "Talla el meló en daus d'uns 2-3 cm o usa un buidador de meló per obtenir esferes.",
+      "Talla el pernil serrano o ibèric en tires fines.",
+      "Embolica cada tros de meló amb una tira de pernil. Punxa amb un escotet.",
+    ],
+    consells: [
+      "El meló ha d'estar ben madur i fred. El contrast fred-dolç del meló amb el salat-umami del pernil és la clau.",
+      "Serveix immediatament: el meló perd textura si es deixa massa temps amb el pernil.",
+    ],
+    presentacio: "Serveix en una safata plana. Guarneix amb fulles de menta fresca per un toc de frescor.",
+  },
+  31: {
+    passos: [
+      "Escorre els cigrons (de pot o cuits). Guarda una mica del líquid de cocció.",
+      "Tritura els cigrons amb la tahina, el suc de llimona, l'all i l'oli d'oliva fins obtenir una pasta fina. Si és massa espessa, afegeix líquid de cocció.",
+      "Rectifica de sal i comino. Tritura un minut més per obtenir una textura molt cremosa.",
+      "Aboca en un bol. Fes un sot al centre, omple amb oli d'oliva i espolsa pimentó dolç.",
+    ],
+    consells: [
+      "El secret d'un hummus cremós és triturar molt bé i durant bastant temps. No t'aturis massa aviat.",
+      "Pelar els cigrons un per un és feixuc però dona una textura increïblement llisa.",
+    ],
+    presentacio: "Serveix amb pa de pita escalfat, bastons de pastanaga, cogombre i api.",
+  },
+  32: {
+    passos: [
+      "Parteix els alvocats per la meitat, treu el pinyol i extreu la polpa amb una cullera. Posa en un bol.",
+      "Aixafa la polpa amb una forquilla fins obtenir la textura desitjada (pot ser llisa o amb trossets).",
+      "Afegeix el suc de llimona o llima, la ceba vermella picada fina, el coriandre, la sal i el chile (opcional). Barreja.",
+      "Tasta i rectifica. Serveix immediatament per evitar l'oxidació.",
+    ],
+    consells: [
+      "El suc de llimona evita l'oxidació. Si no el serves de seguida, col·loca el pinyol dins el guacamole: retarda l'ennegriment.",
+      "Afegeix el chile i el coriandre progressivament i tasta; el punt de picant és molt personal.",
+    ],
+    presentacio: "Serveix en un bol de pedra o terrissa amb nachos, torradetes o verduretes crues al costat.",
+  },
+  36: {
+    passos: [
+      "Neteja les anxoves: treu el cap, separa els dos filets extraient l'espina central. Esbandeix bé sota l'aigüeta.",
+      "Eixuga els filets i col·loca en una capa en una safata. Cobreix completament amb vinagre de vi blanc. Afegeix sal, tapa i refrigera 8-12 hores fins que la carn estigui blanca i opaca.",
+      "Escorre el vinagre. Eixuga bé. Col·loca els filets al recipient de servei.",
+      "Cobreix amb oli d'oliva, all picat molt fi i julivert. Deixa reposar 30 minuts.",
+    ],
+    consells: [
+      "Compra les anxoves frescíssimes (han d'olorar a mar, no a peix). La qualitat de la matèria primera és tot.",
+      "El temps de maceració depèn de la mida dels filets. Comprova que estiguin completament blancs.",
+    ],
+    presentacio: "Serveix a temperatura ambient sobre pa amb tomàquet. Afegeix una mica de piment del piquillo per color.",
+  },
+  38: {
+    passos: [
+      "Tritura les olives negres sense os amb les tàperes, les anxoves, el romaní i un raig d'oli d'oliva fins obtenir una pasta gruixuda.",
+      "Rectifica de sal (compte: les anxoves i les tàperes ja salpen bastant). Afegeix unes gotes de suc de llimona.",
+      "Guarda en un pot de vidre cobert d'oli d'oliva a la nevera.",
+    ],
+    consells: [
+      "No tritures massa: la tapenade ha de tenir textura, no ser un puré. Usa el mode pols del processador.",
+      "Aguanta 2 setmanes a la nevera coberta d'oli. El sabor millora el dia següent.",
+    ],
+    presentacio: "Serveix sobre torrades de pa de pagès, crackers o com acompanyament de formatge fresc.",
+  },
+  40: {
+    passos: [
+      "Dessala el bacallà 24-36 hores. Cou 5 minuts en aigua. Escorre, refreda, desmolla i elimina pells i espines.",
+      "Escalfa l'oli d'oliva (no massa calent) amb els grans d'all fins que siguin tous. Retira l'all.",
+      "Tritura el bacallà mentre afegeixes l'oli amb all poc a poc, com si fessis maionesa. Incorpora patata cuita per donar cos. Salpebra.",
+      "Escalfa lleugerament si cal. Unta generosament sobre les torradetes.",
+    ],
+    consells: [
+      "La brandada ha de tenir textura cremosa però amb petits trossos de bacallà. No ha de ser perfectament llisa.",
+      "L'oli no ha d'estar massa calent o 'cou' el bacallà en comptes d'emulsionar.",
+    ],
+    presentacio: "Serveix calenta sobre torradetes de pa. Decora amb unes olives negres i un raig d'oli verd.",
+  },
+  42: {
+    passos: [
+      "Pela i talla les patates en daus d'uns 2-3 cm. Asseca-les bé amb paper de cuina.",
+      "Fregeix les patates en oli abundant a 160 °C durant 8-10 minuts (cuites però no daurades). Escorre i reserva.",
+      "Prepara la salsa brava: sofregeix ceba i all. Afegeix tomàquet, pimentó picant, vinagre i brou. Cou 15 min. Tritura.",
+      "Just abans de servir, fregeix les patates a 190 °C 2-3 minuts fins que estiguin cruixents i daurades. Escorre i emplata. Cobreix amb la salsa calenta.",
+    ],
+    consells: [
+      "La doble fregida és el secret de les patates cruixents per fora i toves per dins.",
+      "Per una versió más autèntica, barreja la salsa brava amb una mica de maionesa.",
+    ],
+    presentacio: "Serveix immediatament en una cassola de fang o bol de terrissa. Afegeix la salsa per sobre just al moment.",
+  },
+  43: {
+    passos: [
+      "Cou el pop en abundant aigua bullint amb sal durant 30-40 minuts fins que sigui tendre (comprova punxant amb un escuradents). Deixa refredar en el caldo.",
+      "Talla en rodanxes de 1 cm. Pica la ceba i el pebrot en daus petits. Talla els tomàquets.",
+      "Barreja tots els ingredients en un bol. Alinya amb oli d'oliva, vinagre, sal i pebre. Refrigera 1 hora.",
+    ],
+    consells: [
+      "El pop prèviament congelat queda molt més tendre. Si el compres fresc, congela'l la nit anterior.",
+      "Per a que el pop quedi tendre, introdueix-lo a l'olla quan l'aigua bull i 'espanta'l' tres vegades (suca i treu) abans de deixar-lo coure.",
+    ],
+    presentacio: "Serveix fred en un plat pla. Espolsa pimentó de la Vera i afegeix un bon raig d'oli d'oliva.",
+  },
+  46: {
+    passos: [
+      "Pela i talla les patates en làmines fines. Pica la ceba i el pebrot en tires. Salpebra.",
+      "Confita les patates, la ceba i el pebrot en oli abundant a foc mig-baix durant 20-25 minuts fins que les patates siguin toves. Escorre bé l'oli (reserva'l per cuinar).",
+      "Bat els ous amb sal. Incorpora les patates confitades i barreja. Deixa reposar 5 minuts.",
+      "Cuina en paella de 22 cm amb una mica d'oli a foc mig-fort. Quan el fons qualli, tapa i cou 2 min. Volta sobre un plat i torna a la paella. Acaba de cuinar 2-3 min. Ha de quedar lleugerament cremosa per dins.",
+    ],
+    consells: [
+      "No confondis confitar amb fregir: les patates han de coure lentament en l'oli sense daurar-se.",
+      "L'ou ha d'estar lleugerament poc cuit (bavosa) per obtenir la textura perfecta de la truita espanyola.",
+    ],
+    presentacio: "Serveix tèbia o a temperatura ambient. Acompanya amb pa amb tomàquet i allioli.",
+  },
+  48: {
+    passos: [
+      "Parteix les figues per la meitat o en quarters.",
+      "Talla el prosciutto en tires i el gorgonzola en daus o esmicolat.",
+      "Munta en cullereta o broqueta: una figa, una mica de prosciutto, un dau de gorgonzola.",
+      "Opcionalment, drissa amb unes gotes de mel i pebre negre mòlt.",
+    ],
+    consells: [
+      "La combinació funciona perquè hi ha quatre sabors: dolç (figa), salat (pernil), crema (gorgonzola) i lleugerament amarg.",
+      "Usa figues de la Coll de Dama o varietat similar, madures però fermes.",
+    ],
+    presentacio: "Serveix en una pissarra negra per constrastar els colors. Afegeix fulles de ruca fresca al voltant.",
+  },
+  52: {
+    passos: [
+      "Renta els musclos esbandint en aigua freda. Elimina les barbes tirant cap avall. Descarta els que estiguin oberts i no es tanquin en prémer-los.",
+      "Posa en una cassola gran a foc fort sense gens d'aigua. Tapa. Cuina 3-5 minuts remenant de tant en tant fins que s'obrin tots.",
+      "Descarta els que no s'hagin obert. Afegeix el suc de llimona, el cebollí picat i un raig d'oli d'oliva.",
+    ],
+    consells: [
+      "Els musclos no necessiten gens d'aigua: obren amb el vapor que ells mateixos generen.",
+      "Serveix immediatament: els musclos refredats perden tota la gràcia.",
+    ],
+    presentacio: "Serveix en la pròpia cassola o en un bol gran amb el suc de cocció. Pa per sucar és imprescindible.",
+  },
+  54: {
+    passos: [
+      "Neteja els bolets amb un drap humit (mai sota l'agua: absorbeixen la humitat). Talla els peus si cal.",
+      "Escalfa la brasa o planxa a temperatura molt alta. Posa els bolets amb el barret cap avall.",
+      "Cuina 3-4 minuts, volta, afegeix oli d'oliva, all picat i sal. Cuina 2-3 minuts més.",
+    ],
+    consells: [
+      "La temperatura alta és imprescindible: ha de ser suficientment alta per daurar, no bullir.",
+      "Els rossinyols, les girgoles i els ceps són especialment bons a la brasa.",
+    ],
+    presentacio: "Serveix immediatament amb julivert picat i pa torrat per sucar els sucs.",
+  },
+  56: {
+    passos: [
+      "Dessala el bacallà 24 hores. Cou lleugerament, desmolla i esmicola.",
+      "Sofregeix ceba i all fins transparents. Afegeix tomàquet i cou 10 min. Incorpora el bacallà, julivert i condimenta.",
+      "Escorra el líquid dels piquillos. Omple cadascun amb la mescla de bacallà. Tanca amb un escuret si cal.",
+      "Escalfa en una paella amb una mica d'oli 3-4 minuts per cada costat.",
+    ],
+    consells: [
+      "No omples massa els piquillos o s'obriran en coure'ls. Deixa mig centímetre lliure a l'obertura.",
+    ],
+    presentacio: "Serveix sobre una salsa de tomàquet fina. Decora amb julivert picat.",
+  },
+  57: {
+    passos: [
+      "Asseca bé el llom de tonyina amb paper. Cobreix totes les cares amb sèsam blanc i negre. Salpebra.",
+      "Escalfa una paella o planxa a foc molt fort fins que fumeji. Cuina el llom exactament 30-40 segons per cada cara. Ha de quedar cru per dins.",
+      "Deixa reposar 2 minuts. Talla en làmines d'1 cm amb un ganivet molt afilat.",
+    ],
+    consells: [
+      "La tonyina ha d'estar fresca i ser de qualitat sashimi. Si no l'obtens, no facis tataki.",
+      "La cocció ha de ser fulminant: l'interior ha de quedar completament cru (rosat).",
+    ],
+    presentacio: "Serveix sobre una base de daikon ratllat o enciam. Acompanya amb salsa de soja, gingebre i wasabi.",
+  },
+  59: {
+    passos: [
+      "Treu el foie gras o fetge gras de la nevera 10 minuts abans. Talla en làmines d'1,5 cm.",
+      "Escalfa una paella de ferro sense gens de greix a foc fort fins que fumegi. Cuina les làmines 30-40 s per cara.",
+      "Paral·lelament, redueix el Pedro Ximénez en un cassó fins obtenir un almívar.",
+      "Emplata el foie calent immediatament amb la reducció per sobre.",
+    ],
+    consells: [
+      "El foie ha de ser fresc (no mousse ni terrina). Cuina'l just al moment de servir: no suporta l'espera.",
+      "La paella ha d'estar molt calenta per crear una crosta immediata sense que el foie es desfaci.",
+    ],
+    presentacio: "Serveix sobre pa de brioix torrat. Afegeix sal de Maldon i unes fulles de ruca.",
+  },
+  62: {
+    passos: [
+      "Separa les fulles del cabdell. Selecciona les més grans i regulars.",
+      "Barreja el formatge crema amb el pernil picat, una mica de mostassa i pebre negre.",
+      "Unta cada fulla de cabdell amb una culleradeta de la barreja. Enrotlla formant un cigró.",
+      "Punxa amb un escuret. Refrigera 30 minuts.",
+    ],
+    consells: ["El cabdell actua com a base natural: és cruixent, lleuger i fresc. Ideal per a dietes."],
+    presentacio: "Serveix en una safata plana, de peu (la punta cap amunt) per mostrar el farciment.",
+  },
+
+  // ── Salses i Sopes 64–100 ──────────────────────────────────────
+  64: {
+    passos: [
+      "Fon 60 g de mantequilla en un cassó. Incorpora 60 g de farina i cou 2 minuts sense deixar de remenar (ha de quedar groc daurat, no torrat).",
+      "Afegeix 700 ml de llet calenta poc a poc, sense parar de batre amb les varetes. Cou a foc mig-baix 8-10 minuts remenant constantment fins que s'espesseixi.",
+      "Fora del foc, incorpora 100 g de gruyère ratllat i una mica de nou moscada. Remena fins que el formatge es fondi. Rectifica de sal.",
+    ],
+    consells: [
+      "Si surten grumolls, no et preocupis: tritura amb la batedora i quedarà perfecta.",
+      "La clau és la proporció farina/llet: per a una beixamel per gratinar usa més farina; per a salsa, menys.",
+    ],
+    presentacio: "Ideal per a gratinats de pasta, canalons o verdures. Afegeix una capa fina i gratina sota el grill.",
+  },
+  65: {
+    passos: [
+      "Posa la mostassa, el vinagre i una mica de sal en un bol petit. Barreja bé.",
+      "Afegeix l'oli d'oliva verge extra en un raig molt fi, batent constantment amb un batidor fins emulsionar.",
+      "Afegeix el pebre negre mòlt. Rectifica l'acidesa afegint més vinagre o sucre segons el gust.",
+    ],
+    consells: [
+      "La proporció clàssica és 1 part de vinagre per 3 d'oli. Ajusta al teu gust.",
+      "Per a una vinagreta d'herbes, incorpora julivert, ciboulette o estragó picats.",
+    ],
+    presentacio: "Agita o barreja just abans de servir perquè s'emulsioni de nou. Serveix en una salsera al costat.",
+  },
+  67: {
+    passos: [
+      "Pela els grans d'all (uns 4-6 per a la mida casolana). Posa'ls en un morter amb una mica de sal grossa.",
+      "Aixafa els alls fins obtenir una pasta completament llisa.",
+      "Comença a afegir l'oli d'oliva gota a gota, emulsionant constantment amb el mà del morter o batedor. La mà ha de fer moviments circulars.",
+      "Quan comenci a lligar, pots anar afegint l'oli en un filet. Si es talla, afegeix un rovell d'ou i torna a emulsionar.",
+    ],
+    consells: [
+      "La temperatura és crítica: tots els ingredients han d'estar a temperatura ambient per a que lligui bé.",
+      "L'allioli tradicional no porta ou. Si s'hi afegeix un rovell, és tècnicament un 'allioli amb ou', però és molt més fàcil i estable.",
+    ],
+    presentacio: "Serveix en un morter de pedra o en un bol petit. Acompanya carns a la brasa, peix al forn o croquetes.",
+  },
+  68: {
+    passos: [
+      "Pica els cornichons o cogombrets àcids, les tàperes i les herbes (julivert, cebollí, estragó) molt fi.",
+      "Barreja la maionesa amb tots els ingredients picats.",
+      "Incorpora una mica de mostassa i unes gotes de suc de llimona. Rectifica de sal.",
+    ],
+    consells: ["La salsa tàrtara ha de tenir textura: no tritures els ingredients, els piques a ganivet."],
+    presentacio: "Serveix freda acompanyant peix fregit, mariscs o hamburgueses de peix.",
+  },
+  71: {
+    passos: [
+      "Prepara un bany maria: posa un bol metàl·lic sobre una olla amb aigua semihervent (l'aigua no ha de tocar el bol).",
+      "Posa els rovells d'ou i el vi blanc en el bol. Bat constantment amb les varetes fins que la mescla espesseixi i tripliqui de volum (uns 5-7 min).",
+      "Retira del foc i, sense deixar de batre, afegeix la mantequilla clarificada tèbia en un filet fi.",
+      "Segueix batent fins obtenir una salsa espessa i homogènia. Condimenta amb sal, pebre blanc i suc de llimona.",
+    ],
+    consells: [
+      "Si la salsa es talla (es veu granulosa), afegeix una cullera d'aigua freda i bota sense parar. Sol recuperar-se.",
+      "La salsa holandesa no pot esperar: serveix-la immediatament o mantingues calenta al bany maria.",
+    ],
+    presentacio: "La salsa holandesa clàssica acompanya ous pochats, espàrrecs i peix blanc.",
+  },
+  76: {
+    passos: [
+      "Renta les espines i caps de peix (rap, lluç, llenguado). Elimina les brànquies.",
+      "En una olla, sofregeix la ceba, la pastanaga i l'api uns minuts. Afegeix les espines i capes de peix.",
+      "Cobreix amb aigua freda. Afegeix el llorer, el julivert i el pebre en gra. Porta a ebullició.",
+      "Escuma constantment la primera mitja hora. Cou 25-30 minuts a foc baix. Cola amb un colador fi.",
+    ],
+    consells: [
+      "Mai no cuinis el brou de peix més de 30 minuts: s'amarga. El temps és molt important.",
+      "No salis el brou durant la cocció: salpebra després, quan l'usaris en la recepta.",
+    ],
+    presentacio: "Congela en cubs de gel per tenir sempre a mà. Ideal per a arrossos, risottos i salses.",
+  },
+  83: {
+    passos: [
+      "Escalda els tomàquets en aigua bullint 30 s. Pela, treu les llavors i talla en daus.",
+      "Tritura els tomàquets amb el cogombre pelat, el iogurt grec, l'anet fresc, l'all, el suc de llimona i l'oli d'oliva.",
+      "Salpebra. Refrigera 2 hores fins que estigui ben freda.",
+    ],
+    consells: [
+      "La temperatura és clau: serveix-la ben freda per apreciar tots els matisos.",
+    ],
+    presentacio: "Serveix en bols o tasses. Decora amb un filet d'oli, anet fresc i unes gotes de crema agra.",
+  },
+  86: {
+    passos: [
+      "Porta a ebullició el brou de pollastre. Afegeix les verdures (pastanaga, api, ceba) tallades en daus.",
+      "Incorpora l'arròs i cou 18-20 minuts. Afegeix el pollastre cuit (sobres de rostit o pit) esmicola al final.",
+      "Rectifica de sal i afegeix julivert picat.",
+    ],
+    consells: [
+      "Usa sobres de pollastre rostit: queda molt més saborós que el pit cru.",
+      "Afegeix l'arròs just i no et passis de cocció, o s'estovarà.",
+    ],
+    presentacio: "Serveix en bols fons ben calent. Ideal com a sopa reconfortant en dies freds.",
+  },
+  88: {
+    passos: [
+      "Sofregeix la ceba en juliana en oli fins daurada (15 min). Afegeix la col tallada en tires i cou 10 min.",
+      "Incorpora les patates pelades i tallades en daus. Afegeix el brou de pollastre i cou 20 minuts.",
+      "Tritura parcialment (deixa textura). Salpebra. Afegeix cansalada fregida per sobre.",
+    ],
+    consells: ["La ceba daurada és la base del sabor. No saltis ni escurcis aquest pas."],
+    presentacio: "Serveix en plats fondos amb les cansaladetes per sobre i pa torrat al costat.",
+  },
+  91: {
+    passos: [
+      "Sofregeix ceba, all i pebrot vermell en mantequilla. Afegeix el tomàquet i cou 10 min.",
+      "Incorpora el brou de peix i el safrà. Porta a ebullició.",
+      "Afegeix els mariscs (musclos, gambes, calamars). Cou 5 min.",
+      "Afegeix la nata i cou 3 min més. Rectifica de sal i serveix.",
+    ],
+    consells: [
+      "Afegeix els mariscs al final perquè no es sobrecoguenin. El calmar és el que triga més (5 min), les gambes menys (2 min).",
+    ],
+    presentacio: "Serveix amb pa de pagès torrat. Decora amb cebollí picat i un raig d'oli d'oliva verd.",
+  },
+  92: {
+    passos: [
+      "Sofregeix la ceba en oli fins transparent. Afegeix els pèsols (frescos o congelats) i el brou. Cou 10 min.",
+      "Tritura fins obtenir una crema fina. Cola si vols una textura molt llisa.",
+      "Afegeix la menta fresca i una mica de nata. Rectifica de sal. Serveix calenta o freda.",
+    ],
+    consells: [
+      "No cuinis massa temps la sopa un cop triturada: el color verd es perd amb la calor prolongada.",
+    ],
+    presentacio: "Serveix en bols blancs amb un toc de nata, fulles de menta i un raig d'oli de menta.",
+  },
+  93: {
+    passos: [
+      "Talla la ceba en juliana molt fina. Sofregeix en mantequilla i oli a foc molt baix durant 40-45 minuts remenant sovint fins obtenir una ceba molt daurada i caramel·litzada.",
+      "Afegeix el vi blanc o conyac i deixa evaporar. Aboca el brou de carn calent. Cou 15 minuts.",
+      "Serveix en cassoles individuals refractàries. Col·loca una llesca de pa de pagès torrat per sobre. Cobreix amb gruyère ratllat.",
+      "Gratina sota el grill del forn 5-7 minuts fins que el formatge estigui daurat i borbollejant.",
+    ],
+    consells: [
+      "La paciència per caramel·litzar la ceba és imprescindible. El color daurat profund és el que dona el sabor dolç i complex.",
+      "Usa un brou de carn casolà de bona qualitat: és la base de la sopa.",
+    ],
+    presentacio: "Serveix immediatament, ben calenta, directament a la cassola individual. El formatge ha de filam.",
+  },
+  100: {
+    passos: [
+      "Sofregeix la ceba picada en oli fins transparent (5 min). Afegeix els carbassons tallats en daus sense pelar.",
+      "Cou 5 minuts, afegeix el brou de verdures o de pollastre i porta a ebullició. Cou 15 minuts fins que el carbassó sigui molt tendre.",
+      "Tritura fins obtenir una crema fina. Afegeix la nata si es desitja. Rectifica de sal i pebre.",
+      "Serveix calenta o freda (en estiu és excel·lent freda).",
+    ],
+    consells: [
+      "Per una versió més lleugera, substitueix la nata per llet o simplement no n'afegeixis.",
+      "Afegir un tros de patata a la cocció dona més cos a la crema sense necessitat de nata.",
+    ],
+    presentacio: "Serveix en bols amb un raig d'oli d'oliva, unes llesques de carbassó fregit i ciboulette picat.",
+  },
 }
