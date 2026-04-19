@@ -110,6 +110,13 @@ export default function RecipeDetail({ recipe: r, onBack }) {
             <p className="text-xs text-green-900 leading-relaxed">{r.presentacio}</p>
           </div>
         )}
+
+        {r.versio_lleugera && (
+          <div className="mt-3 bg-sky-50 rounded-xl p-3.5 border border-sky-200">
+            <p className="text-xs font-semibold text-sky-700 mb-1">🥗 Versió lleugera</p>
+            <p className="text-xs text-sky-900 leading-relaxed">{r.versio_lleugera}</p>
+          </div>
+        )}
       </div>
 
       {/* Log de proves */}

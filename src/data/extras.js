@@ -1,6 +1,219 @@
 // Passos detallats, consells i presentació per cada recepta (clau = num)
 export const EXTRAS = {
+  // Receptes reals del llibre (1–16)
   1: {
+    passos: [
+      "Remulla les cuixes de granota en llet durant 30 minuts. Escorre i eixuga bé amb paper de cuina. Salpebra.",
+      "Posa la farina en un plat pla. Bat els ous en un bol. Posa el pa ratllat en un altre plat.",
+      "Enreborna cada cuixa: primer per la farina (sacsejant l'excés), després per l'ou batut i finalment pel pa ratllat.",
+      "Escalfa abundant oli en una paella fonda o cassola. Fregeix les cuixes en dues tongades fins que estiguin daurades per tots costats (uns 4-5 minuts). Escorre sobre paper absorbent.",
+      "Serveix immediatament amb mitges llimones per esprémer a sobre.",
+    ],
+    consells: [
+      "La llet elimina qualsevol olor fort. No saltis aquest pas.",
+      "L'oli ha d'estar ben calent (180 °C) per obtenir un arrebossat cruixent sense que la carn absorbeixi greix.",
+    ],
+    presentacio: "Serveix sobre un llit de fulles de llimoner o julivert, amb les llimones al costat.",
+  },
+  2: {
+    passos: [
+      "Neteja les anxoves: treu el cap, obre-les per la ventre i extreu l'espina central amb els dits. Esbandeix sota l'aixeta.",
+      "Eixuga bé els filets. Col·loca'ls en una capa en una safata i cobreix del tot amb vinagre blanc i una mica de sal. Tapa i refrigera 12 hores (o fins que la carn estigui blanca i opaca).",
+      "Escorre el vinagre. Eixuga els filets amb paper de cuina i col·loca en el recipient de servei.",
+      "Cobreix amb oli d'oliva verge extra, all picat molt fi i julivert picat. Deixa reposar 1 hora a temperatura ambient per integrar els sabors.",
+    ],
+    consells: [
+      "Com més fresques siguin les anxoves, millor serà el resultat. Compra-les el mateix dia.",
+      "Si vols un punt de picant, afegeix una guindilla seca en trossets a l'oli.",
+    ],
+    presentacio: "Serveix a temperatura ambient com a tapa o primer plat, amb pa amb tomàquet.",
+  },
+  3: {
+    passos: [
+      "Separa els troncs d'api de les fulles. Elimina els fils exteriors amb un pelador de verdures. Renta i seca.",
+      "Talla els troncs en bastons d'uns 7 cm. Reserva les fulles tendres per decorar.",
+      "Aixafa el roquefort en un bol amb una forquilla. Incorpora la mantequilla tova a trossets i la nata. Treballa fins obtenir una crema llisa. Salpebra al gust.",
+      "Farceix el canal de cada bastó d'api amb la crema de roquefort (amb una cullereta o màniga pastissera). Refrigera 15 minuts per firmar.",
+    ],
+    consells: [
+      "La crema guanya si es prepara el dia anterior: els sabors s'integren millor.",
+      "Si el roquefort és molt intens, barreja'l amb formatge crema a parts iguals.",
+    ],
+    presentacio: "Serveix en un plat llarg decorat amb les fulles tendres de l'api. Ideal com a aperitiu fred.",
+  },
+  4: {
+    passos: [
+      "Cou les gambes en aigua bullint amb sal i una fulla de llorer durant 2 minuts. Escorre i refreda en aigua amb gel. Pela i reserva.",
+      "Prepara les barquetes. Si les fas casolanes: prepara una massa sablée, folra els motlles de barqueta, cou en blanc a 180 °C 12 minuts i deixa refredar.",
+      "Posa una base d'enciam picat fi al fons de cada barqueta.",
+      "Col·loca 3-4 gambes per barqueta. Cobreix amb maionesa amb una cullereta o màniga. Decora amb un tros de tomàquet.",
+    ],
+    consells: [
+      "Munta les barquetes just abans de servir per evitar que la pasta s'estovi amb la humitat.",
+      "Pots afegir unes gotes de tabasco a la maionesa per donar-li un toc picant.",
+    ],
+    presentacio: "Serveix en una safata plana. Afegeix unes gotes de llimona just al moment de servir.",
+  },
+  5: {
+    passos: [
+      "Escorre bé la tonyina de l'oli. Esmicola en un bol.",
+      "Barreja la tonyina amb maionesa fins obtenir una pasta cremosa. Rectifica de sal.",
+      "Talla el pa de motlle amb un tallador rodó. Tosta lleugerament si es desitja. Unta amb una mica de mantequilla.",
+      "Posa una cullerada de la barreja de tonyina per sobre. Decora amb una rodanxa d'ou dur i una oliva verda.",
+    ],
+    consells: [
+      "Afegir una mica de suc de llimona i uns tàperes picats a la barreja de tonyina millora molt el resultat.",
+      "Pots preparar la pasta de tonyina amb hores d'antelació i guardar-la tapada a la nevera.",
+    ],
+    presentacio: "Serveix en una safata, alternant amb altres tipus de canapès per varietat visual.",
+  },
+  6: {
+    passos: [
+      "Talla el pa de motlle en rodones o quadrats d'uns 5 cm. Tosta lleugerament si es desitja.",
+      "Unta cada peça amb una capa fina de mantequilla.",
+      "Posa una culleradeta de nata agra o crème fraîche al centre.",
+      "Col·loca una petita quantitat de caviar o huevas de lumpo sobre la nata. Serveix immediatament amb unes gotes de llimona.",
+    ],
+    consells: [
+      "El caviar real és molt delicat. Serveix sempre ben fred i en el moment just.",
+      "Les huevas de lumpo (negres o vermelles) són una alternativa econòmica que queda igual de vistosa.",
+    ],
+    presentacio: "Serveix sobre una base de gel picat per mantenir el fred. Ideal per a aperitius de festa.",
+  },
+  7: {
+    passos: [
+      "Talla el pa brioche o de motlle en llesques d'1 cm. Tosta lleugerament.",
+      "Deixa el foie gras o paté a temperatura ambient 15 minuts per a que sigui fàcil d'escampar.",
+      "Unta generosament cada llesca amb el foie gras.",
+      "Escalfa la gelatina fins que sigui líquida. Aplica una capa molt fina per sobre del foie amb un pinzell. Deixa refredar fins que solidifiqui.",
+      "Acaba amb uns grans de pebre negre mòlt. Serveix immediadament o refrigera fins al moment de servir.",
+    ],
+    consells: [
+      "La gelatina protegeix el foie de l'oxidació i dona una acabat brillant elegant.",
+      "Pots perfumar la gelatina amb una mica de Porto o Sauternes.",
+    ],
+    presentacio: "Serveix sobre una safata de fusta o pissarra. Acompanya amb confitura de raïm o figues.",
+  },
+  8: {
+    passos: [
+      "Talla el pa de motlle amb talladors rodons o triangulars. Unta amb mantequilla.",
+      "Talla el pernil dolç i la pinya a mida del pa.",
+      "Posa una capa de pernil i damunt una capa de pinya.",
+      "Decora amb mitja cirera o guinda a la part superior. Refrigera fins al moment de servir.",
+    ],
+    consells: [
+      "La pinya fresca dona un resultat molt millor que la de conserva, ja que és menys dolça i té més textura.",
+      "Pots afegir una capa de crema de formatge entre el pa i el pernil per donar cremositat.",
+    ],
+    presentacio: "Serveix en safata intercalant-los amb altres canapès. El contrast de colors (rosa, groc, vermell) fa un efecte molt visual.",
+  },
+  9: {
+    passos: [
+      "Talla el pa de motlle en quadrats. Col·loca sobre una safata de forn.",
+      "Unta cada peça amb una capa generosa de maionesa.",
+      "Escampa formatge emmental ratllat per sobre cobrint bé la superfície.",
+      "Enforna a 200 °C o sota el gratinador durant 5-7 minuts fins que el formatge bulli i agafi color daurat. Serveix immediatament.",
+    ],
+    consells: [
+      "Vigila que no es cremin: el gratinador és molt potent. Posa la safata a mig nivell del forn.",
+      "Pots barrejar formatge emmental amb parmesà per un sabor més intens.",
+    ],
+    presentacio: "Serveix molt calents, just sortits del forn. Posa'ls en una safata resistent a la calor.",
+  },
+  10: {
+    passos: [
+      "Talla el pa de motlle en rectangles o quadrats. Unta amb mantequilla tova.",
+      "Posa una capa de formatge tendre (tipus Camembert, Brie o formatge fresc) sobre el pa.",
+      "Escorre el pimentó vermell en conserva i talla en tires fines.",
+      "Distribueix les tires de pimentó per sobre del formatge formant una graella o en diagonal. Acaba amb julivert picat.",
+    ],
+    consells: [
+      "El pimentó de piquillo és especialment dolç i saborós per a aquest ús.",
+      "Pots afegir una mica de sal en escates just al moment de servir per donar textura.",
+    ],
+    presentacio: "El contrast del vermell del pimentó i el blanc del formatge el fa molt atractiu. Serveix fred.",
+  },
+  11: {
+    passos: [
+      "Talla el pa de motlle en quadrats. Unta amb mantequilla. Col·loca sobre safata de forn.",
+      "Posa una llesca de formatge emmental sobre cada quadrat de pa.",
+      "Afegeix una rodanxa de tomàquet per sobre (premsa una mica per treure l'excés de líquid).",
+      "Col·loca mitja llesca de bacó per sobre. Enforna a 200 °C durant 5-7 minuts fins que el bacó estigui cruixent i el formatge fos.",
+    ],
+    consells: [
+      "El bacó en làmines molt fines es cou ràpidament. Si és gruixut, daurar-lo a la paella primer.",
+      "Pots afegir una mica d'orenga per sobre del tomàquet per un toc mediterrani.",
+    ],
+    presentacio: "Serveix immediatament, calent. Perfecte per a reunions informals i festes.",
+  },
+  12: {
+    passos: [
+      "Talla el pa de motlle en rectangles o usa galetes salades de bona qualitat.",
+      "Unta cada peça amb mantequilla tova i una capa fina de formatge crema.",
+      "Talla el salmó fumat en tires i col·loca dues o tres tires per sobre del formatge.",
+      "Acabar amb uns brots d'anet fresc, unes gotes de suc de llimona i un toc de pebre negre. Servir fred.",
+    ],
+    consells: [
+      "El salmó fumat i el formatge crema és una combinació clàssica que funciona sempre.",
+      "Afegir una mica de rave picat (raifort) al formatge crema dona un punt molt interessant.",
+    ],
+    presentacio: "Serveix sobre una safata amb uns talls de llimona als costats i anet extra com a decoració.",
+  },
+  13: {
+    passos: [
+      "Talla el pa de motlle en quadrats o usa galetes de sègol.",
+      "Unta amb mantequilla i una capa de formatge crema.",
+      "Posa una tira de truita fumada o anguila fumada per sobre. Si uses anguila, elimina la pell i les espines primer.",
+      "Afegeix una petita quantitat de rave picat (raifort) al costat i unes gotes de llimona. Acaba amb cebollí picat.",
+    ],
+    consells: [
+      "L'anguila fumada és molt rica en sabor; una mica n'hi ha prou. La truita fumada és més suau.",
+      "El raifort és indispensable: contrasta perfectament amb la untuositat del peix fumat.",
+    ],
+    presentacio: "Serveix molt fred. Pots acompanyar amb una copeta de cava o vi blanc sec.",
+  },
+  14: {
+    passos: [
+      "Prepara els farcits: barreja de tonyina amb maionesa, o pernil i formatge, o el que prefereixis.",
+      "Unta les llesques de pa de motlle sense crosta amb mantequilla i el farcit escollit. Tapa amb una altra llesca. Pressiona bé.",
+      "Talla en rectangles o triangles. Passa per ou batut i pa ratllat, pressionant perquè s'adhereixi.",
+      "Escalfa abundant oli a 180 °C. Fregeix els canapès en tongades fins daurar per ambdós costats (uns 2 minuts per costat). Escorre sobre paper absorbent i serveix calent.",
+    ],
+    consells: [
+      "L'oli ha d'estar prou calent: si no, el pa absorbirà oli i quedarà ensopegat.",
+      "Pots preparar els canapès farcits i arrebossats amb antelació i fregir-los just abans de servir.",
+    ],
+    presentacio: "Serveix immediatament, molt calents. El contrast de l'exterior cruixent i l'interior calent és el seu millor atribut.",
+  },
+  15: {
+    passos: [
+      "Renta bé els crancs sota l'aigüa freda.",
+      "Prepara una olla gran amb abundant aigua (mínim 4 L per kg de crancs). Afegeix sal generosa (com el mar). Porta a ebullició forta.",
+      "Introdueix els crancs vius quan l'aigua bulli a borbollons. Tapa. Quan torni a bullir, compta 5 minuts.",
+      "Escorre immediatament i serveix amb llimones partides.",
+    ],
+    consells: [
+      "Els crancs han d'estar vius fins al moment de coure'ls per garantir la qualitat.",
+      "No els passis de cocció: 5 minuts des que torna a bullir és el màxim, o la carn quedarà tova.",
+    ],
+    presentacio: "Serveix en una safata gran o directament sobre paper de cuina. Informal i festiu.",
+  },
+  16: {
+    passos: [
+      "Fes dejunar els cargols 2 dies en una caixa ventilada amb sal al fons. Neteja'ls amb sal gruixuda i vinagre fins que l'escuma sigui clara. Esbandeix molt bé.",
+      "Posa els cargols en una olla coberta d'aigua freda. Escalfa a foc molt lent perquè surtin de la closca. Quan l'aigua bulli, escorre i canvia l'aigua.",
+      "Torna a cobrir d'aigua freda amb vi blanc, llorer i canyella. Cou a foc mig 40-50 minuts fins que la carn sigui tendra. Escorre.",
+      "Serveix a la llauna (cassola de fang) amb oli d'oliva, all picat, julivert i guindilla. Escalfa uns minuts a foc fort fins que xisclegi l'oli.",
+    ],
+    consells: [
+      "El dejuni és imprescindible per buidar l'intestí dels cargols. No saltis aquest pas.",
+      "L'escalfament gradual és la clau per obtenir els cargols fora de la closca.",
+    ],
+    presentacio: "Serveix directament a la cassola de fang fumejant. Acompanya amb pa de pagès i allioli.",
+  },
+
+  // Receptes de mostra de l'app (1081+)
+  1081: {
     passos: [
       "Talla la mantequilla freda en daus petits. En un bol gran, barreja la farina tamisada amb una mica de sal. Afegeix la mantequilla i treballa amb els dits fins obtenir una textura de sorra fina (sense sobreescalfar la massa).",
       "Afegeix l'ou batut i barreja just fins que la massa lligui. Si cal, afegeix una cullerada d'aigua freda. No amassís en excés o la massa quedarà dura.",
@@ -13,7 +226,7 @@ export const EXTRAS = {
       "Pots preparar la massa amb antelació i congelar-la. Descongela a la nevera la nit anterior.",
     ],
   },
-  10: {
+  1082: {
     passos: [
       "Cou les gambes en aigua bullint amb sal i una fulla de llorer durant 2-3 minuts. Escorre i deixa refredar. Pela-les i reserva.",
       "Prepara una base d'enciam picat fi al fons de cada barqueta. Distribueix les gambes per sobre.",
