@@ -47,9 +47,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-amber-50 flex flex-col">
+    <div className="bg-amber-50 flex flex-col overflow-hidden" style={{ height: '100dvh' }}>
       {/* Header */}
-      <header className="bg-amber-800 text-white px-4 py-3 shadow-md">
+      <header className="bg-amber-800 text-white px-4 shadow-md shrink-0"
+        style={{ paddingTop: 'max(0.75rem, env(safe-area-inset-top))', paddingBottom: '0.75rem' }}>
         <div className="max-w-7xl mx-auto flex items-center gap-3">
           <span className="text-2xl">🍽️</span>
           <div>
@@ -59,8 +60,8 @@ export default function App() {
         </div>
       </header>
 
-      {/* Filter bar */}
-      <div className="bg-white border-b border-amber-100 shadow-sm sticky top-0 z-40">
+      {/* Filter bar — no cal sticky, el layout és fix */}
+      <div className="bg-white border-b border-amber-100 shadow-sm z-40 shrink-0">
         <div className="max-w-7xl mx-auto">
           <FilterBar
             filters={filters}
@@ -71,13 +72,14 @@ export default function App() {
         </div>
       </div>
 
-      {/* Main */}
-      <main className="flex-1 max-w-7xl mx-auto w-full px-3 py-4">
-        <div className="flex gap-4 h-full">
+      {/* Main — ocupa l'espai restant i no fa scroll propi */}
+      <main className="flex-1 min-h-0 max-w-7xl mx-auto w-full px-3 py-3 overflow-hidden"
+        style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}>
+        <div className="flex gap-4 h-full min-h-0">
 
-          {/* Recipe list — hidden on mobile when detail is open */}
-          <div className={`${mobileView === 'detail' ? 'hidden lg:flex' : 'flex'} flex-col w-full lg:w-80 xl:w-96 shrink-0`}>
-            <p className="text-xs text-stone-500 mb-2 px-1">
+          {/* Recipe list */}
+          <div className={`${mobileView === 'detail' ? 'hidden lg:flex' : 'flex'} flex-col w-full lg:w-80 xl:w-96 shrink-0 min-h-0`}>
+            <p className="text-xs text-stone-500 mb-2 px-1 shrink-0">
               <span className="font-semibold text-stone-700">{filtered.length}</span> recepta{filtered.length !== 1 ? 'es' : ''} trobada{filtered.length !== 1 ? 'es' : ''}
             </p>
             <RecipeList
@@ -88,7 +90,7 @@ export default function App() {
           </div>
 
           {/* Recipe detail */}
-          <div className={`${mobileView === 'list' ? 'hidden lg:flex' : 'flex'} flex-col flex-1 min-w-0`}>
+          <div className={`${mobileView === 'list' ? 'hidden lg:flex' : 'flex'} flex-col flex-1 min-w-0 min-h-0`}>
             {selected ? (
               <RecipeDetail
                 recipe={selected}

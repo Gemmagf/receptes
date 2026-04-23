@@ -4,11 +4,15 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-amber-50 text-stone-800; }
+  body { @apply bg-amber-50 text-stone-800; -webkit-tap-highlight-color: transparent; }
+  button, input, textarea { touch-action: manipulation; }
 }
 
 @layer utilities {
   .scrollbar-thin::-webkit-scrollbar { width: 4px; }
   .scrollbar-thin::-webkit-scrollbar-track { @apply bg-amber-100; }
   .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-amber-300 rounded-full; }
+  /* Amaga scrollbar horitzontal en mòbil (per filtres) */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }

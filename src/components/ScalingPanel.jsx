@@ -44,15 +44,15 @@ export default function ScalingPanel({ recipe }) {
       <div className="px-4 py-3 flex items-center gap-3 border-b border-stone-100">
         <button
           onClick={() => setComensals(c => Math.max(1, c - 1))}
-          className="w-7 h-7 rounded-full border border-stone-300 text-stone-600 flex items-center justify-center hover:bg-amber-50 hover:border-amber-400 font-bold text-base transition-colors"
+          className="w-11 h-11 rounded-full border border-stone-300 text-stone-600 flex items-center justify-center hover:bg-amber-50 hover:border-amber-400 active:bg-amber-100 font-bold text-lg transition-colors"
         >−</button>
-        <div className="flex flex-col items-center">
-          <span className="text-xl font-bold text-amber-700">{comensals}</span>
+        <div className="flex flex-col items-center min-w-[3rem]">
+          <span className="text-2xl font-bold text-amber-700">{comensals}</span>
           <span className="text-[10px] text-stone-400">persones</span>
         </div>
         <button
           onClick={() => setComensals(c => Math.min(50, c + 1))}
-          className="w-7 h-7 rounded-full border border-stone-300 text-stone-600 flex items-center justify-center hover:bg-amber-50 hover:border-amber-400 font-bold text-base transition-colors"
+          className="w-11 h-11 rounded-full border border-stone-300 text-stone-600 flex items-center justify-center hover:bg-amber-50 hover:border-amber-400 active:bg-amber-100 font-bold text-lg transition-colors"
         >+</button>
         {changed && (
           <span className="ml-2 text-xs text-stone-400">

@@ -11,7 +11,7 @@ export default function RecipeList({ recipes, selectedNum, onSelect }) {
   }
 
   return (
-    <div className="flex flex-col gap-1.5 overflow-y-auto scrollbar-thin pr-1" style={{ maxHeight: 'calc(100vh - 160px)' }}>
+    <div className="flex flex-col gap-1.5 overflow-y-auto scrollbar-thin pr-1 flex-1 min-h-0 pb-2">
       {recipes.map(r => (
         <RecipeCard
           key={r.num}

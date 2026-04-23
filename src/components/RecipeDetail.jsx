@@ -24,16 +24,16 @@ const TIPUS_COLOR = {
 
 export default function RecipeDetail({ recipe: r, onBack }) {
   return (
-    <div className="flex flex-col gap-4 overflow-y-auto scrollbar-thin pr-1" style={{ maxHeight: 'calc(100vh - 160px)' }}>
+    <div className="flex flex-col gap-4 overflow-y-auto scrollbar-thin pr-1 flex-1 min-h-0 pb-2">
 
       {/* Capçalera */}
       <div className="bg-white rounded-xl border border-stone-200 px-4 py-4">
         {/* Botó enrere (mòbil) */}
         <button
           onClick={onBack}
-          className="lg:hidden flex items-center gap-1.5 text-xs text-amber-600 mb-3 hover:text-amber-800"
+          className="lg:hidden flex items-center gap-1.5 text-sm font-medium text-amber-600 mb-3 -mx-1 px-1 py-2 rounded-lg hover:bg-amber-50 active:bg-amber-100 transition-colors"
         >
-          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
           Tornar a la llista
