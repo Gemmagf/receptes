@@ -4,6 +4,7 @@ import FilterBar from './components/FilterBar'
 import RecipeList from './components/RecipeList'
 import RecipeDetail from './components/RecipeDetail'
 import ImageRecipeModal from './components/ImageRecipeModal'
+import HelpModal from './components/HelpModal'
 
 const CUSTOM_KEY = 'receptes-custom'
 
@@ -43,6 +44,7 @@ export default function App() {
   const [selectedNum, setSelectedNum] = useState(null)
   const [mobileView, setMobileView] = useState('list')
   const [showImageModal, setShowImageModal] = useState(false)
+  const [showHelp, setShowHelp]             = useState(false)
   const [customRecipes, setCustomRecipes]   = useState(loadCustom)
 
   // Combina les receptes del llibre + les receptes guardades per l'usuari
@@ -86,6 +88,17 @@ export default function App() {
             <h1 className="text-lg font-bold leading-tight">1080 Receptes de Cuina</h1>
             <p className="text-amber-200 text-xs">Simone Ortega · En català</p>
           </div>
+          {/* Botó ajuda */}
+          <button
+            onClick={() => setShowHelp(true)}
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-amber-700 hover:bg-amber-600 active:bg-amber-900 border border-amber-600 text-white transition-colors shrink-0"
+            title="Com funciona"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+          </button>
+
           {/* Botó identificar plat per foto */}
           <button
             onClick={() => setShowImageModal(true)}
@@ -165,6 +178,9 @@ export default function App() {
 
         </div>
       </main>
+
+      {/* Modal ajuda */}
+      {showHelp && <HelpModal onClose={() => setShowHelp(false)} />}
 
       {/* Modal identificació per foto */}
       {showImageModal && (
