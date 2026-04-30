@@ -22,25 +22,51 @@ const TIPUS_COLOR = {
   'Fruita':     'bg-pink-100 text-pink-700',
 }
 
-export default function RecipeDetail({ recipe: r, onBack }) {
+export default function RecipeDetail({ recipe: r, onBack, onDelete }) {
   return (
     <div className="flex flex-col gap-4 overflow-y-auto scrollbar-thin pr-1 flex-1 min-h-0 pb-2">
 
       {/* Capçalera */}
       <div className="bg-white rounded-xl border border-stone-200 px-4 py-4">
-        {/* Botó enrere (mòbil) */}
-        <button
-          onClick={onBack}
-          className="lg:hidden flex items-center gap-1.5 text-sm font-medium text-amber-600 mb-3 -mx-1 px-1 py-2 rounded-lg hover:bg-amber-50 active:bg-amber-100 transition-colors"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-          Tornar a la llista
-        </button>
+        {/* Fila superior mòbil: enrere + eliminar */}
+        <div className="lg:hidden flex items-center justify-between mb-3">
+          <button
+            onClick={onBack}
+            className="flex items-center gap-1.5 text-sm font-medium text-amber-600 -mx-1 px-1 py-2 rounded-lg hover:bg-amber-50 active:bg-amber-100 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Tornar a la llista
+          </button>
+          {onDelete && (
+            <button onClick={onDelete}
+              className="flex items-center gap-1 text-xs text-red-400 hover:text-red-600 hover:bg-red-50 active:bg-red-100 px-2 py-1.5 rounded-lg transition-colors">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+              Eliminar
+            </button>
+          )}
+        </div>
 
-        <p className="text-xs font-bold text-amber-500 mb-1">Recepta #{r.num}</p>
-        <h2 className="text-lg font-bold text-stone-800 leading-snug mb-3">{r.nom}</h2>
+        <div className="flex items-start justify-between gap-2">
+          <div className="min-w-0">
+            <p className="text-xs font-bold text-amber-500 mb-1">
+              {r.custom ? '📷 Recepta pròpia' : `Recepta #${r.num}`}
+            </p>
+            <h2 className="text-lg font-bold text-stone-800 leading-snug mb-3">{r.nom}</h2>
+          </div>
+          {onDelete && (
+            <button onClick={onDelete}
+              className="hidden lg:flex items-center gap-1 text-xs text-red-400 hover:text-red-600 hover:bg-red-50 px-2 py-1.5 rounded-lg transition-colors shrink-0">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+              Eliminar
+            </button>
+          )}
+        </div>
 
         {/* Metadades */}
         <div className="flex flex-wrap gap-1.5 mb-3">
