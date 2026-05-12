@@ -80,24 +80,88 @@ export default function ImageRecipeModal({ onClose, onSave }) {
     handleFile(e.dataTransfer.files[0])
   }, [])
 
-  // ── Cridar la Netlify Function ────────────────────────────────────────────
+  const [modelUsed, setModelUsed] = useState(null)
+
+  // ── Prompt per a Ollama (gemma3:4b) ───────────────────────────────────────
+  const OLLAMA_PROMPT = `You are a culinary expert. Look at the food image and generate a recipe in Catalan (català).
+Return ONLY a valid JSON object. No markdown, no explanation, just the JSON:
+
+{
+  "nom": "Nom del plat en català",
+  "categoria": "Carns",
+  "persones": 4,
+  "dificultat": "Fàcil",
+  "temps": "30 min",
+  "tipus_ingredients": ["Carn"],
+  "ingredients": ["500 g de...", "sal", "pebre"],
+  "passos": ["Pas 1.", "Pas 2.", "Pas 3."],
+  "consells": ["Consell 1.", "Consell 2."],
+  "presentacio": "Com emplatar i servir."
+}
+
+Regles:
+- dificultat ha de ser exactament: Fàcil, Mitjana, o Difícil
+- Tot el contingut ha d'estar en català
+- Retorna NOMÉS el JSON, res més`
+
+  // ── Cridar Ollama local (gemma3:4b) ───────────────────────────────────────
+  async function callOllama(base64, mediaType) {
+    const res = await fetch('/api/ollama/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'gemma3:4b',
+        prompt: OLLAMA_PROMPT,
+        images: [base64],
+        stream: false,
+        options: { temperature: 0.1, num_predict: 2048 },
+      }),
+      signal: AbortSignal.timeout(300_000), // 5 min màx
+    })
+    if (!res.ok) throw new Error(`Ollama HTTP ${res.status}`)
+    const data = await res.json()
+    let raw = data.response?.trim() ?? ''
+    raw = raw.replace(/```json/g, '').replace(/```/g, '').trim()
+    const start = raw.indexOf('{'), end = raw.lastIndexOf('}')
+    if (start === -1 || end === -1) throw new Error('Resposta no és JSON')
+    return JSON.parse(raw.slice(start, end + 1))
+  }
+
+  // ── Cridar Netlify Function (fallback producció) ───────────────────────────
+  async function callNetlify(base64, mediaType) {
+    const res = await fetch('/.netlify/functions/identify-recipe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ base64, mediaType }),
+    })
+    const data = await res.json()
+    if (!res.ok || data.error) throw new Error(data.error || 'Error desconegut')
+    return data.recipe
+  }
+
+  // ── Anàlisi: prova Ollama, fallback a Netlify ─────────────────────────────
   async function handleAnalyze() {
     if (!imgPayload) return
     setStep('loading')
     setError(null)
+    setModelUsed(null)
+    const { base64, mediaType } = imgPayload
     try {
-      const res = await fetch('/.netlify/functions/identify-recipe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(imgPayload),
-      })
-      const data = await res.json()
-      if (!res.ok || data.error) throw new Error(data.error || 'Error desconegut')
-      setRecipe(data.recipe)
+      const recipe = await callOllama(base64, mediaType)
+      setModelUsed('gemma3:4b (local)')
+      setRecipe(recipe)
       setStep('result')
-    } catch (err) {
-      setError(err.message)
-      setStep('error')
+    } catch (ollamaErr) {
+      console.warn('Ollama no disponible, provant Netlify...', ollamaErr.message)
+      try {
+        const recipe = await callNetlify(base64, mediaType)
+        setModelUsed('Claude (cloud)')
+        setRecipe(recipe)
+        setStep('result')
+      } catch (netlifyErr) {
+        setError('No s\'ha pogut analitzar la imatge. Comprova que Ollama està corrent (`ollama serve`) o que estàs desplegat a Netlify.')
+        setStep('error')
+      }
     }
   }
 
@@ -108,6 +172,7 @@ export default function ImageRecipeModal({ onClose, onSave }) {
     setImgPayload(null)
     setRecipe(null)
     setError(null)
+    setModelUsed(null)
   }
 
   // ── Render ────────────────────────────────────────────────────────────────
@@ -190,7 +255,8 @@ export default function ImageRecipeModal({ onClose, onSave }) {
               <div className="w-12 h-12 border-4 border-amber-200 border-t-amber-500 rounded-full animate-spin" />
               <div className="text-center">
                 <p className="text-sm font-medium text-stone-700">Analitzant el plat…</p>
-                <p className="text-xs text-stone-400 mt-1">La IA identifica el plat i genera la recepta</p>
+                <p className="text-xs text-stone-400 mt-1">gemma3:4b identifica el plat i genera la recepta</p>
+                <p className="text-xs text-stone-300 mt-0.5">Pot trigar fins a 2 minuts</p>
               </div>
             </div>
           )}
@@ -208,7 +274,14 @@ export default function ImageRecipeModal({ onClose, onSave }) {
             <div className="space-y-3">
               {/* Capçalera recepta */}
               <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
-                <p className="text-xs font-bold text-amber-500 uppercase tracking-wide mb-1">✨ Plat identificat</p>
+                <div className="flex items-center justify-between mb-1">
+                  <p className="text-xs font-bold text-amber-500 uppercase tracking-wide">✨ Plat identificat</p>
+                  {modelUsed && (
+                    <span className="text-xs text-stone-400 bg-stone-100 px-2 py-0.5 rounded-full">
+                      🤖 {modelUsed}
+                    </span>
+                  )}
+                </div>
                 <h3 className="text-xl font-bold text-stone-800 mb-3">{recipe.nom}</h3>
                 <div className="flex flex-wrap gap-1.5">
                   <span className={`text-xs px-2.5 py-1 rounded-full border ${DIF_COLOR[recipe.dificultat] ?? 'bg-stone-100 text-stone-600 border-stone-200'}`}>
