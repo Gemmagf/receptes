@@ -127,9 +127,9 @@ Regles:
     return JSON.parse(raw.slice(start, end + 1))
   }
 
-  // ── Cridar Netlify Function (fallback producció) ───────────────────────────
-  async function callNetlify(base64, mediaType) {
-    const res = await fetch('/.netlify/functions/identify-recipe', {
+  // ── Cridar Gemini (producció) ─────────────────────────────────────────────
+  async function callGemini(base64, mediaType) {
+    const res = await fetch('/.netlify/functions/identify-recipe-gemini', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ base64, mediaType }),
@@ -139,29 +139,41 @@ Regles:
     return data.recipe
   }
 
-  // ── Anàlisi: prova Ollama, fallback a Netlify ─────────────────────────────
+  // ── Anàlisi: Ollama en local, Gemini en producció ─────────────────────────
   async function handleAnalyze() {
     if (!imgPayload) return
     setStep('loading')
     setError(null)
     setModelUsed(null)
     const { base64, mediaType } = imgPayload
-    try {
-      const recipe = await callOllama(base64, mediaType)
-      setModelUsed('gemma3:4b (local)')
-      setRecipe(recipe)
-      setStep('result')
-    } catch (ollamaErr) {
-      console.warn('Ollama no disponible, provant Netlify...', ollamaErr.message)
+    const isLocal = window.location.hostname === 'localhost'
+
+    if (isLocal) {
+      // Local: prova gemma3 via Ollama primer
       try {
-        const recipe = await callNetlify(base64, mediaType)
-        setModelUsed('Claude (cloud)')
+        const recipe = await callOllama(base64, mediaType)
+        setModelUsed('gemma3:4b (local)')
         setRecipe(recipe)
         setStep('result')
-      } catch (netlifyErr) {
-        setError('No s\'ha pogut analitzar la imatge. Comprova que Ollama està corrent (`ollama serve`) o que estàs desplegat a Netlify.')
-        setStep('error')
+        return
+      } catch (err) {
+        console.warn('Ollama no disponible, provant Gemini...', err.message)
       }
+    }
+
+    // Producció (o fallback local): usa Gemini 2.0 Flash
+    try {
+      const recipe = await callGemini(base64, mediaType)
+      setModelUsed('Gemini 2.0 Flash')
+      setRecipe(recipe)
+      setStep('result')
+    } catch (err) {
+      if (isLocal) {
+        setError('Cap model disponible. Comprova que Ollama està corrent (ollama serve) i que GEMINI_API_KEY està configurada.')
+      } else {
+        setError(`Error analitzant la imatge: ${err.message}`)
+      }
+      setStep('error')
     }
   }
 
@@ -255,8 +267,12 @@ Regles:
               <div className="w-12 h-12 border-4 border-amber-200 border-t-amber-500 rounded-full animate-spin" />
               <div className="text-center">
                 <p className="text-sm font-medium text-stone-700">Analitzant el plat…</p>
-                <p className="text-xs text-stone-400 mt-1">gemma3:4b identifica el plat i genera la recepta</p>
-                <p className="text-xs text-stone-300 mt-0.5">Pot trigar fins a 2 minuts</p>
+                <p className="text-xs text-stone-400 mt-1">
+                  {window.location.hostname === 'localhost' ? 'gemma3:4b (local)' : 'Gemini 2.0 Flash'} identifica el plat i genera la recepta
+                </p>
+                <p className="text-xs text-stone-300 mt-0.5">
+                  {window.location.hostname === 'localhost' ? 'Pot trigar fins a 2 minuts' : 'Normalment en ~5 segons'}
+                </p>
               </div>
             </div>
           )}
