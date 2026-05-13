@@ -136,7 +136,7 @@ Regles:
     })
     const data = await res.json()
     if (!res.ok || data.error) throw new Error(data.error || 'Error desconegut')
-    return data.recipe
+    return { recipe: data.recipe, model: data.model || 'Gemini' }
   }
 
   // ── Anàlisi: Ollama en local, Gemini en producció ─────────────────────────
@@ -161,10 +161,10 @@ Regles:
       }
     }
 
-    // Producció (o fallback local): usa Gemini 2.0 Flash
+    // Producció (o fallback local): usa Gemini
     try {
-      const recipe = await callGemini(base64, mediaType)
-      setModelUsed('Gemini 2.0 Flash')
+      const { recipe, model } = await callGemini(base64, mediaType)
+      setModelUsed(model || 'Gemini')
       setRecipe(recipe)
       setStep('result')
     } catch (err) {

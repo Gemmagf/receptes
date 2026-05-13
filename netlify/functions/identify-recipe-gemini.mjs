@@ -61,25 +61,36 @@ export const handler = async (event) => {
   try {
     const { base64, mediaType } = JSON.parse(event.body)
 
-    const geminiRes = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{
-            parts: [
-              { inline_data: { mime_type: mediaType, data: base64 } },
-              { text: PROMPT },
-            ],
-          }],
-          generationConfig: {
-            temperature: 0.1,
-            maxOutputTokens: 2048,
-          },
-        }),
-      }
-    )
+    // Prova models en ordre fins que un funcioni (quota free tier)
+    const MODELS = ['gemini-1.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash-8b']
+    let geminiRes = null
+    let lastErr   = null
+
+    for (const model of MODELS) {
+      geminiRes = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{
+              parts: [
+                { inline_data: { mime_type: mediaType, data: base64 } },
+                { text: PROMPT },
+              ],
+            }],
+            generationConfig: { temperature: 0.1, maxOutputTokens: 2048 },
+          }),
+        }
+      )
+      if (geminiRes.ok) break
+      const errData = await geminiRes.json().catch(() => ({}))
+      lastErr = errData.error?.message || `HTTP ${geminiRes.status}`
+      console.warn(`Model ${model} failed: ${lastErr}`)
+      geminiRes = null
+    }
+
+    if (!geminiRes) throw new Error(lastErr || 'Tots els models han fallat')
 
     if (!geminiRes.ok) {
       const err = await geminiRes.json().catch(() => ({}))
@@ -101,11 +112,13 @@ export const handler = async (event) => {
     if (start === -1 || end === -1) throw new Error('Resposta no conté JSON vàlid')
 
     const recipe = JSON.parse(cleaned.slice(start, end + 1))
+    // Detecta quin model ha respost per mostrar-ho al frontend
+    const modelUsed = geminiRes.url?.match(/models\/([^:]+)/)?.[1] ?? 'gemini'
 
     return {
       statusCode: 200,
       headers: { ...CORS, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ recipe }),
+      body: JSON.stringify({ recipe, model: modelUsed }),
     }
   } catch (err) {
     return {
