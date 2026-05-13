@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { RECEPTES_COMPLETES as RECEPTES, CATEGORIES, DIFICULTATS, TIPUS_INGREDIENTS, MAX_PERSONES } from './data/receptes'
 import FilterBar from './components/FilterBar'
 import RecipeList from './components/RecipeList'
@@ -6,13 +6,35 @@ import RecipeDetail from './components/RecipeDetail'
 import ImageRecipeModal from './components/ImageRecipeModal'
 import HelpModal from './components/HelpModal'
 
-const CUSTOM_KEY = 'receptes-custom'
+const CUSTOM_KEY   = 'receptes-custom'
+const GITHUB_RAW   = 'https://raw.githubusercontent.com/Gemmagf/receptes/main/public/receptes_custom.json'
 
-function loadCustom() {
+function loadCustomLocal() {
   try { return JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]') } catch { return [] }
 }
-function saveCustom(list) {
+function saveCustomLocal(list) {
   localStorage.setItem(CUSTOM_KEY, JSON.stringify(list))
+}
+
+async function fetchCustomRemote() {
+  try {
+    const res = await fetch(`${GITHUB_RAW}?t=${Date.now()}`) // evita cache
+    if (!res.ok) return []
+    return await res.json()
+  } catch {
+    return []
+  }
+}
+
+async function saveCustomRemote(recipe) {
+  const res = await fetch('/.netlify/functions/save-recipe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ recipe }),
+  })
+  const data = await res.json()
+  if (!res.ok || data.error) throw new Error(data.error || 'Error desconegut')
+  return data
 }
 
 const EMPTY_FILTERS = {
@@ -45,7 +67,21 @@ export default function App() {
   const [mobileView, setMobileView] = useState('list')
   const [showImageModal, setShowImageModal] = useState(false)
   const [showHelp, setShowHelp]             = useState(false)
-  const [customRecipes, setCustomRecipes]   = useState(loadCustom)
+  const [customRecipes, setCustomRecipes]   = useState(loadCustomLocal)
+  const [savingRecipe, setSavingRecipe]     = useState(false)
+
+  // Carrega receptes custom remotes en iniciar (fusiona amb les locals)
+  useEffect(() => {
+    fetchCustomRemote().then(remote => {
+      if (!remote.length) return
+      setCustomRecipes(prev => {
+        // Fusiona: remotes primer, locals que no existeixin ja al remot
+        const remoteIds = new Set(remote.map(r => r.id))
+        const onlyLocal = prev.filter(r => r.id && !remoteIds.has(r.id))
+        return [...remote, ...onlyLocal]
+      })
+    })
+  }, [])
 
   // Combina les receptes del llibre + les receptes guardades per l'usuari
   const allRecipes = useMemo(
@@ -65,15 +101,28 @@ export default function App() {
     setMobileView('list')
   }
 
-  // Guarda la recepta generada per IA a localStorage i la selecciona
-  function handleSaveCustom(recipe) {
-    const num = Date.now() // ID únic basat en timestamp
-    const full = { ...recipe, num, custom: true }
+  // Guarda la recepta: localment de forma immediata + al remot (GitHub)
+  async function handleSaveCustom(recipe) {
+    const num  = Date.now()
+    const full = { ...recipe, num, id: `custom_${num}`, custom: true }
+
+    // 1. Desa localment de seguida (UX immediata)
     const updated = [...customRecipes, full]
     setCustomRecipes(updated)
-    saveCustom(updated)
+    saveCustomLocal(updated)
     setSelectedNum(num)
     setMobileView('detail')
+
+    // 2. Intenta desar al remot (GitHub via Netlify Function)
+    setSavingRecipe(true)
+    try {
+      await saveCustomRemote(full)
+      console.log('✅ Recepta desada al remot:', full.nom)
+    } catch (err) {
+      console.warn('⚠️ No s\'ha pogut desar al remot (es queda localment):', err.message)
+    } finally {
+      setSavingRecipe(false)
+    }
   }
 
   return (
